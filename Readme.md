@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Кирилл Кутюев](https://up.htmlacademy.ru/adaptive/10/user/343219).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Калинин](https://up.htmlacademy.ru/adaptive/10/user/311377).
 
 ---
 
