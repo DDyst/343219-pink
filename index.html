@@ -5,6 +5,183 @@
     <title>Пинк</title>
   </head>
   <body>
+    <header class="main-header">
+      <h1 class="visually-hidden">Приложение «Pink»</h1>
+      <nav class="main-nav">
+        <div class="main-nav__menu  main-nav__menu--closed">
+          <div class="logo  main-nav__logo">
+            <a>Pink</a>
+          </div>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Развернуть/свернуть меню</span></button>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main class="main-content">
+      <div class="intro  intro--index">
+        <img class="intro__img" src="" alt="Приложение «Pink»">
+      </div>
+
+      <section class="download">
+        <h2 class="visually-hidden">Загрузите наше приложение</h2>
+        <a class="btn  btn--color-white  download__btn" href="#">Скачать приложение</a>
+        <ul class="download__list">
+          <li class="download__item"><a class="download__link  download__link--apple" href="#"><span class="visually-hidden">Скачать для Apple</span></a></li>
+          <li class="download__item"><a class="download__link  download__link--android" href="#"><span class="visually-hidden">Скачать для Android</span></a></li>
+          <li class="download__item"><a class="download__link  download__link--windows" href="#"><span class="visually-hidden">Скачать для Windows</span></a></li>
+        </ul>
+        <p class="download__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </section>
+
+      <section class="features">
+        <header class="features__header">
+          <h2 class="visually-hidden">Особенности нашего приложения</h2>
+          <p class="features__slogan">Устали от серости мегаполиса?</p>
+          <p class="features__slogan">Нам есть, что вам предложить!</p>
+        </header>
+        <div class="features__wrap">
+          <div class="features_list">
+            <div class="features__item">
+              <h3 class="features__title">Поднимает настроение</h3>
+              <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
+            <div class="features__item">
+              <h3 class="features__title">Меняет мир вокруг</h3>
+              <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
+            <div class="features__item">
+              <h3 class="features__title">Заводит новых друзей</h3>
+              <p class="features__desc">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
+          </div>
+          <img class="features__img" src="" alt="Привет!">
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2 class="visually-hidden">Отзывы о приложении</h2>
+        <div class="reviews__slider">
+          <div class="reviews__slides">
+            <div class="reviews__slide">
+              <h3 class="reviews__title">Николай Петров</h3>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </div>
+            <div class="reviews__slide">
+              <h3 class="reviews__title">Lorem ipsum.</h3>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum, voluptates, cum labore perferendis dolore asperiores ipsam iusto commodi laboriosam!</p>
+            </div>
+            <div class="reviews__slide">
+              <h3 class="reviews__title">Lorem ipsum.</h3>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellat quae error cupiditate inventore quisquam earum labore placeat consectetur tempore.</p>
+            </div>
+          </div>
+          <div class="slider-controls  reviews__slider-controls">
+            <i class="slider-controls__item  slider-controls__item--active"></i>
+            <i class="slider-controls__item"></i>
+            <i class="slider-controls__item"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="prices">
+        <h2 class="visually-hidden">Расценки</h2>
+        <div class="prices__slider">
+          <div class="prices__slides">
+            <div class="prices__slide">
+              <table class="prices__table">
+                <tr>
+                  <th class="prices__table-header">
+                    <h3 class="prices__title">Lorem.</h3>
+                    <div class="prices__price">Lorem.</div>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell  prices__table-cell--available">Lorem.</td>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell">Lorem.</td>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell">Lorem.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="prices__slide">
+              <table class="prices__table">
+                <tr>
+                  <th class="prices__table-header">
+                    <h3 class="prices__title">Стандарт</h3>
+                    <div class="prices__price">3,99 USD</div>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell  prices__table-cell--available">Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell  prices__table-cell--available">Смайлики</td>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell">Комментарии</td>
+                </tr>
+              </table>
+            </div>
+            <div class="prices__slide">
+              <table class="prices__table">
+                <tr>
+                  <th class="prices__table-header">
+                    <h3 class="prices__title">Lorem.</h3>
+                    <div class="prices__price">Lorem.</div>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell">Lorem.</td>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell">Lorem.</td>
+                </tr>
+                <tr>
+                  <td class="prices__table-cell">Lorem.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="slider-controls  prices__slider-controls">
+            <i class="slider-controls__item"></i>
+            <i class="slider-controls__item  slider-controls__item--active"></i>
+            <i class="slider-controls__item"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <p class="contacts__desc">Остались вопросы? Свяжитесь с нами!</p>
+        <div class="contacts__list">
+          <div class="contacts__item">
+            <b class="contacts__caption">Звоните:</b>
+            <p class="contacts__text">+7 (812) 555-66-66</p>
+          </div>
+          <div class="contacts__item">
+            <b class="contacts__caption">Пишите:</b>
+            <p class="contacts__text">mail@htmlacademy.ru</p>
+          </div>
+          <div class="contacts__item">
+            <b class="contacts__caption">Приезжайте в гости:</b>
+            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Наш офис на карте</h2>
+        <img class="map__img" src="" alt="Карта">
+      </section>
+    </main>
   </body>
 </html>
