@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотографии</title>
   </head>
   <body>
@@ -10,7 +11,7 @@
       <nav class="main-nav">
         <div class="main-nav__menu  main-nav__menu--closed">
           <div class="logo  main-nav__logo">
-            <a href="index.html">Pink</a>
+            <a href="index.html" aria-label="Переход на главную страницу"><img src="http://placehold.it/75x22" alt="Pink"></a>
           </div>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Развернуть/свернуть меню</span></button>
         </div>
@@ -33,9 +34,8 @@
         <p class="photos__desc">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <div class="photos__list">
           <div class="photo-item  photos__item">
-            <div class="photo-item__label">Панорама дня</div>
             <div class="photo-item__img  photo-item__img--panoramic">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/320x137" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -52,7 +52,7 @@
 
           <div class="photo-item  photos__item">
             <div class="photo-item__img">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -69,7 +69,7 @@
 
           <div class="photo-item  photos__item">
             <div class="photo-item__img">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -86,7 +86,7 @@
 
           <div class="photo-item  photos__item">
             <div class="photo-item__img">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -103,7 +103,7 @@
 
           <div class="photo-item  photos__item">
             <div class="photo-item__img">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -120,7 +120,7 @@
 
           <div class="photo-item  photos__item">
             <div class="photo-item__img">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -137,7 +137,7 @@
 
           <div class="photo-item photos__item">
             <div class="photo-item__img">
-              <a href="#"><img src="" alt="Изображение другого пользователя"></a>
+              <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
             </div>
             <div class="photo-item__desc">
               <div class="photo-item__title">
@@ -161,14 +161,28 @@
           <div class="upload__picture">
             <input type="file" name="picture">
           </div>
-          <div class="upload__controls">
-            <div class="upload__control-btn"></div>
-            <div class="upload__control-btn"></div>
-            <div class="upload__control-btn"></div>
+          <div class="upload__filters">
+            <div class="upload__filter">
+              <input class="upload__filter-btn" type="radio" name="filter" id="crop-btn" value="crop" checked>
+              <label class="upload__label  upload__label--crop" for="crop-btn"><span class="visually-hidden">Вырезать</span></label>
+            </div>
+            <div class="upload__filter">
+              <input class="upload__filter-btn" type="radio" name="filter" id="fill-btn" value="fill">
+              <label class="upload__label  upload__label--fill" for="fill-btn"><span class="visually-hidden">Заливка</span></label>
+            </div>
+            <div class="upload__filter">
+              <input class="upload__filter-btn" type="radio" name="filter" id="contrast-btn" value="contrast">
+              <label class="upload__label  upload__label--contrast" for="contrast-btn"><span class="visually-hidden">Контрастность</span></label>
+            </div>
           </div>
-          <div class="slider  upload__slider">
-            <div class="slider__scale"></div>
-            <div class="slider__toggle"></div>
+          <div class="range-slider  upload__slider">
+            <input class="range-slider__input" type="range" name="crop-slider" id="crop-field">
+          </div>
+          <div class="range-slider  upload__slider">
+            <input class="range-slider__input" type="range" name="fill-slider" id="fill-field">
+          </div>
+          <div class="range-slider  upload__slider">
+            <input class="range-slider__input" type="range" name="contrast-slider" id="contrast-field">
           </div>
           <div class="upload__buttons">
             <input class="btn" type="submit" value="Запостить">
@@ -179,13 +193,13 @@
     </main>
 
     <footer class="main-footer">
-      <div class="logo  logo--blue  main-footer__logo">
-        <a href="index.html"><img src="" alt="">Pink</a>
+      <div class="logo  main-footer__logo">
+        <a href="index.html" aria-label="Переход на главную страницу"><img src="http://placehold.it/147x40" alt="Pink"></a>
       </div>
       <div class="socials  main-footer__socials">
-        <a class="social-btn social-btn--twitter" href="#"><span class="visually-hidden">Twitter</span></a>
-        <a class="social-btn social-btn--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
-        <a class="social-btn social-btn--youtube" href="#"><span class="visually-hidden">Youtube</span></a>
+        <a class="social-btn social-btn--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
+        <a class="social-btn social-btn--facebook" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
+        <a class="social-btn social-btn--youtube" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
       </div>
       <div class="copyright  main-footer__copyright">
         <span class="copyright__label">Разработано</span>
