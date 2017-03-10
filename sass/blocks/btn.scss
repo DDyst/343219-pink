@@ -1,0 +1,35 @@
+.btn {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  font-weight: normal;
+  font-size: $font-size-bigger;
+  line-height: 18px;
+  font-family: $font-bold;
+  text-align: center;
+  text-decoration: none;
+  color: $color-secondary;
+  background-color: transparent;
+  border: 3px solid $color-secondary;
+  border-radius: 24px;
+  cursor: pointer;
+  &--white {
+    color: $bg-primary;
+    border-color: $bg-primary;
+  }
+  &--gray {
+    color: rgba(40, 54, 69, 0.1);
+    border-color: #dddfe0;
+  }
+  &--green {
+    padding-top: 17px;
+    padding-bottom: 16px;
+    line-height: 30px;
+    color: $bg-primary;
+    background-color: #2aab6d;
+    border: none;
+    border-radius: 2px;
+  }
+}

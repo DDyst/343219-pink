@@ -1,0 +1,55 @@
+.form__desc {
+  margin-top: 6px;
+  margin-bottom: 46px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.form__group {
+  padding: 38px 0 18px 0;
+  border: none;
+  &--bg-grey {
+    background-color: $bg-secondary;
+  }
+}
+
+.form__subtitle {
+  margin-bottom: 36px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-secondary;
+}
+
+.form__text-field {
+  margin-bottom: 24px;
+}
+
+.form__checkbox {
+  margin-bottom: 43px;
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.form__radio {
+  margin-bottom: 36px;
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.form__btn {
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+.form__footnote {
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__asterisk {
+  color: $color-secondary;
+}
