@@ -1,0 +1,34 @@
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.contacts__desc {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: $font-size-biggest;
+  line-height: 29px;
+  font-family: $font-light;
+}
+
+.contacts__caption {
+  font-weight: normal;
+  font-size: $font-size-bigger;
+  line-height: 22px;
+  font-family: $font-bold;
+}
+
+.contacts__text {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: $font-size-biggest;
+  line-height: 29px;
+  font-family: $font-light;
+  color: $color-secondary;
+}
+
+.contacts__link {
+  color: inherit;
+  text-decoration: none;
+}

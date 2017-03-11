@@ -1,0 +1,44 @@
+.features {
+  text-align: center;
+  background-color: $bg-secondary;
+}
+
+.features__header {
+  padding-top: 46px;
+  padding-bottom: 20px;
+  background-color: $bg-primary;
+}
+
+.features__slogan {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: $font-size-biggest;
+  line-height: 24px;
+  font-family: $font-light;
+}
+
+.features__list {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: $font-size-bigger;
+  line-height: 24px;
+  font-family: $font-bold;
+}
+
+.features__desc {
+  margin-top: 0;
+  margin-bottom: 36px;
+  line-height: 24px;
+}
+
+.features__img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}

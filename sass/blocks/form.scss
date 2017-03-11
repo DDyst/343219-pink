@@ -1,0 +1,83 @@
+.form__desc {
+  margin-top: 6px;
+  margin-bottom: 46px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.form__group {
+  padding: 38px 0 18px 0;
+  border: none;
+  &--bg-grey {
+    background-color: $bg-secondary;
+  }
+}
+
+.form__subtitle {
+  margin-bottom: 36px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-secondary;
+}
+
+.form__text-field {
+  margin-bottom: 24px;
+}
+
+.form__checkbox {
+  margin-bottom: 43px;
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.form__radio {
+  margin-bottom: 36px;
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.form__main-btn {
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+.form__footnote {
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__asterisk {
+  color: $color-secondary;
+}
+
+.form__pop-up {
+  padding-top: 40px;
+  text-align: center;
+  &--error {
+    padding-bottom: 50px;
+  }
+}
+
+.form__pop-up-title {
+  font-weight: normal;
+  font-size: $font-size-bigger;
+  font-family: $font-bold;
+}
+
+.form__pop-up-desc {
+  margin-top: 30px;
+  margin-bottom: 34px;
+  &--error {
+    margin-bottom: 38px;
+  }
+}
+
+.form__btn-container {
+  padding-top: 48px;
+  padding-bottom: 52px;
+  background-color: $bg-secondary;
+}

@@ -1,0 +1,36 @@
+.photo-item {
+  line-height: 24px;
+}
+
+.photo-item__img img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo-item__desc {
+  box-sizing: border-box;
+  padding: 22px 18px 26px 18px;
+  background-color: $bg-secondary;
+}
+
+.photo-item__author {
+  font-weight: normal;
+  font-family: $font-bold;
+}
+
+.photo-item__time {
+  font-size: $font-size-smaller;
+  font-family: $font-light;
+}
+
+.photo-item__text {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.photo-item__likes-value {
+  font-size: $font-size-smaller;
+  text-transform: uppercase;
+  color: $color-secondary;
+}

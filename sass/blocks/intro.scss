@@ -1,0 +1,26 @@
+.intro {
+  box-sizing: border-box;
+  min-height: 237px;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  color: $bg-primary;
+  background: #2b3b4b url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  &--index {
+    padding-bottom: 0;
+  }
+}
+
+.intro__img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  margin-top: 58px;
+}
+
+.intro__title {
+  font-weight: normal;
+  font-size: $font-size-biggest;
+  line-height: 29px;
+  font-family: $font-light;
+  text-align: center;
+}

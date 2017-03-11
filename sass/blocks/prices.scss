@@ -1,0 +1,39 @@
+.prices {
+  padding-top: 66px;
+  padding-bottom: 47px;
+  background-color: $bg-secondary;
+  text-transform: uppercase;
+}
+
+.prices__slides {
+  margin-bottom: 40px;
+}
+
+.prices__slide {
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+}
+
+.prices__header {
+  padding: 19px 0;
+  line-height: 30px;
+  text-align: center;
+  color: $bg-primary;
+  background-color: $color-primary;
+}
+
+.prices__title {
+  font-size: $font-size-bigger;
+  font-family: $font-bold;
+}
+
+.prices__price {
+  font-size: $font-size-biggest;
+  font-family: $font-light;
+}
+
+.prices__feature {
+  padding: 15px 0 14px 22px;
+  background-color: $bg-primary;
+  border-bottom: 2px solid #e5e5e5;
+}
