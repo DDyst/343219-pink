@@ -20,7 +20,7 @@
     border-color: $bg-primary;
   }
   &--gray {
-    color: rgba(40, 54, 69, 0.1);
+    color: rgba($color-primary, 0.1);
     border-color: #dddfe0;
   }
   &--green {

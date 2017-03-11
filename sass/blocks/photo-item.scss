@@ -2,10 +2,13 @@
   line-height: 24px;
 }
 
-.photo-item__img img {
-  vertical-align: top;
-  max-width: 100%;
-  height: auto;
+.photo-item__img {
+  img {
+    @include image;
+  }
+  &--panoramic {
+    text-align: center;
+  }
 }
 
 .photo-item__desc {

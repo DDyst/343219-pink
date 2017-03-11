@@ -1,3 +1,8 @@
 .map {
+  text-align: center;
   background-color: $bg-secondary;
+}
+
+.map__img {
+  @include image;
 }
