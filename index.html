@@ -134,45 +134,44 @@
       </section>
 
       <section class="prices">
-        <div class="layout-positioner">
+        <div class="layout-positioner  layout-positioner--mobile-inactive">
           <h2 class="visually-hidden">Расценки</h2>
           <div class="prices__slider">
-            <div class="prices__features-block">
-              <div class="prices__feature">Розовый фильтр</div>
-              <div class="prices__feature">Смайлики</div>
-              <div class="prices__feature">Комментарии</div>
-            </div>
-            <div class="prices__slides">
-              <div class="prices__slide  js-hidden">
-                <div class="prices__header">
+            <table class="prices__slides">
+              <tr>
+                <th class="prices__header  prices__header--empty"></th>
+                <th class="prices__header">
                   <div class="prices__title">База</div>
                   <div class="prices__price">1,99 USD</div>
-                </div>
-                <div class="prices__feature  prices__feature--available"><span class="prices__feature-text">Розовый фильтр</span></div>
-                <div class="prices__feature"><span class="prices__feature-text">Смайлики</span></div>
-                <div class="prices__feature"><span class="prices__feature-text">Комментарии</span></div>
-              </div>
-
-              <div class="prices__slide">
-                <div class="prices__header">
+                </th>
+                <th class="prices__header">
                   <div class="prices__title">Стандарт</div>
                   <div class="prices__price">3,99 USD</div>
-                </div>
-                <div class="prices__feature  prices__feature--available"><span class="prices__feature-text">Розовый фильтр</span></div>
-                <div class="prices__feature  prices__feature--available"><span class="prices__feature-text">Смайлики</span></div>
-                <div class="prices__feature"><span class="prices__feature-text">Комментарии</span></div>
-              </div>
-
-              <div class="prices__slide  js-hidden">
-                <div class="prices__header">
+                </th>
+                <th class="prices__header">
                   <div class="prices__title">Анлим</div>
                   <div class="prices__price">9,99 USD</div>
-                </div>
-                <div class="prices__feature  prices__feature--available"><span class="prices__feature-text">Розовый фильтр</span></div>
-                <div class="prices__feature  prices__feature--available"><span class="prices__feature-text">Смайлики</span></div>
-                <div class="prices__feature  prices__feature--available"><span class="prices__feature-text">Комментарии</span></div>
-              </div>
-            </div>
+                </th>
+              </tr>
+              <tr>
+                <td class="prices__feature  prices__feature--mobile-hidden">Розовый фильтр</td>
+                <td class="prices__feature  prices__feature--available"><span class="prices__feature-text">Розовый фильтр</span></td>
+                <td class="prices__feature  prices__feature--available"><span class="prices__feature-text">Розовый фильтр</span></td>
+                <td class="prices__feature  prices__feature--available"><span class="prices__feature-text">Розовый фильтр</span></td>
+              </tr>
+              <tr>
+                <td class="prices__feature  prices__feature--mobile-hidden">Смайлики</td>
+                <td class="prices__feature"><span class="prices__feature-text">Смайлики</span></td>
+                <td class="prices__feature  prices__feature--available"><span class="prices__feature-text">Смайлики</span></td>
+                <td class="prices__feature  prices__feature--available"><span class="prices__feature-text">Смайлики</span></td>
+              </tr>
+              <tr>
+                <td class="prices__feature  prices__feature--mobile-hidden">Комментарии</td>
+                <td class="prices__feature"><span class="prices__feature-text">Комментарии</span></td>
+                <td class="prices__feature"><span class="prices__feature-text">Комментарии</span></td>
+                <td class="prices__feature  prices__feature--available"><span class="prices__feature-text">Комментарии</span></td>
+              </tr>
+            </table>
 
             <div class="slider-controls  prices__slider-controls">
               <i class="slider-controls__item"></i>
