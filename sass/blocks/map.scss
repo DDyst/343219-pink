@@ -6,3 +6,15 @@
 .map__img {
   @include image;
 }
+
+@media (min-width: $tablet-width) {
+  .map {
+    min-height: 380px; /*!!!!!!!!!!!!!!!!*/
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    min-height: 502px; /*!!!!!!!!!!!!!*/
+  }
+}

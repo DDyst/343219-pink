@@ -1,7 +1,33 @@
 .page {
+  min-width: $mobile-width;
   font-weight: normal;
   font-size: $font-size-primary;
   line-height: 24px;
   font-family: $font-reg;
   color: $color-primary;
+}
+
+.page__main-header {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -66px;
+}
+
+.page__research {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page__main-header {
+    margin-bottom: -110px;
+  }
+
+  .page__download {
+    position: absolute;
+    top: 206px;
+  }
+
+  .page__research {
+    display: block;
+  }
 }

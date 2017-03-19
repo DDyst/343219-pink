@@ -1,19 +1,22 @@
 .intro {
   box-sizing: border-box;
-  min-height: 237px;
+  min-height: 237px; /*!!!!!!!!!!!*/
   padding-top: 90px;
-  padding-bottom: 50px;
   text-align: center;
   color: $bg-primary;
-  background: #2b3b4b url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
   &--index {
-    padding-bottom: 0;
+    position: relative;
+    min-height: 733px; /*!!!!!!!!!!!*/
   }
 }
 
 .intro__img {
+  margin-top: 86px;
+}
+
+.intro__img img {
   @include image;
-  margin-top: 58px;
 }
 
 .intro__title {
@@ -21,4 +24,29 @@
   font-size: $font-size-biggest;
   line-height: 29px;
   font-family: $font-light;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    min-height: 440px; /*!!!!!!!!!!*/
+    padding-top: 180px;
+    &--index {
+      min-height: 729px; /*!!!!!!!!!!*/
+    }
+  }
+
+  .intro__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    padding-top: 170px;
+    min-height: 394px; /*!!!!!!!!!!*/
+    &--index {
+      min-height: 853px; /*!!!!!!!!!!*/
+    }
+  }
 }

@@ -20,8 +20,25 @@
     text-transform: uppercase;
     color: $color-secondary;
   }
-  &--area {
-    display: block;
-    text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form-field {
+    &--in-a-row {
+      display: flex;
+      align-items: center;
+    }
+    &--reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-field {
+    &--half-width {
+      width: 375px;
+    }
   }
 }

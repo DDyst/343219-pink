@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
-    <header class="main-header">
+    <header class="main-header  page__main-header">
       <div class="layout-positioner">
         <h1 class="visually-hidden">Приложение «Pink»</h1>
         <nav class="main-nav">
@@ -30,102 +30,110 @@
     <main class="main-content">
       <div class="intro">
         <div class="layout-positioner">
-          <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <h1 class="intro__title">Конкурс на самое безбашенное путешествие&nbsp;с&nbsp;Пинк</h1>
         </div>
       </div>
 
       <section class="form">
-        <h2 class="visually-hidden">Заполните форму для участия в конкурсе</h2>
+        <div class="layout-positioner">
+          <h2 class="visually-hidden">Заполните форму для участия в конкурсе</h2>
+          <p class="form__desc">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="form__additional-desc  form__additional-desc--tablet">Пожалуйста, заполните форму ниже:</span></p>
+        </div>
         <form class="form__body" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__group">
-            <div class="layout-positioner">
-              <p class="form__desc">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-              <div class="form-field  form__text-field">
-                <label class="form-field__label  form-field__label--text" for="surname-field">Фамилия:</label>
-                <input class="form-field__text-field" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *">
+          <div class="layout-positioner  layout-positioner--mobile-inactive  form__container">
+            <fieldset class="form__group  form__group--half-width  form__group--no-border">
+              <div class="layout-positioner  layout-positioner--mobile-only">
+                <div class="form-field  form-field--in-a-row  form__text-field">
+                  <label class="form-field__label  form-field__label--text" for="surname-field">Фамилия:</label>
+                  <input class="form-field__text-field" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *">
+                </div>
+                <div class="form-field  form-field--in-a-row  form__text-field">
+                  <label class="form-field__label  form-field__label--text" for="name-field">Имя:</label>
+                  <input class="form-field__text-field" type="text" name="name" id="name-field" placeholder="Введите ваше имя *">
+                </div>
+                <div class="form-field  form-field--in-a-row  form__text-field">
+                  <label class="form-field__label  form-field__label--text" for="patronymic-field">Отчество:</label>
+                  <input class="form-field__text-field" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
+                </div>
               </div>
-              <div class="form-field  form__text-field">
-                <label class="form-field__label  form-field__label--text" for="name-field">Имя:</label>
-                <input class="form-field__text-field" type="text" name="name" id="name-field" placeholder="Введите ваше имя *">
-              </div>
-              <div class="form-field  form__text-field">
-                <label class="form-field__label  form-field__label--text" for="patronymic-field">Отчество:</label>
-                <input class="form-field__text-field" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="form__group  form__group--bg-grey">
-            <div class="layout-positioner">
-              <legend class="form__subtitle">Ваши безбашенные достижения в путешествии</legend>
-              <div class="form-field  form__checkbox">
-                <input class="form-field__checkbox" type="checkbox" name="selfie" id="selfie-field" checked>
-                <label class="form-field__label" for="selfie-field">Сделал селфи с акулой</label>
+            <fieldset class="form__group  form__group--bg-grey  form__group--fourth">
+              <legend class="form__subtitle" align="center">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</legend>
+              <div class="layout-positioner  layout-positioner--mobile-only  form__group-container">
+                <div class="form-field  form__checkbox">
+                  <input class="form-field__checkbox" type="checkbox" name="selfie" id="selfie-field" checked>
+                  <label class="form-field__label" for="selfie-field">Сделал селфи с акулой</label>
+                </div>
+                <div class="form-field  form__checkbox  form__checkbox--fourth">
+                  <input class="form-field__checkbox" type="checkbox" name="beach" id="beach-field" checked>
+                  <label class="form-field__label" for="beach-field">Обгорел на пляже</label>
+                </div>
+                <div class="form-field  form__checkbox  form__checkbox--second">
+                  <input class="form-field__checkbox" type="checkbox" name="chuck" id="chuck-field">
+                  <label class="form-field__label" for="chuck-field">Видел Чака Норриса</label>
+                </div>
+                <div class="form-field  form__checkbox  form__checkbox--fifth">
+                  <input class="form-field__checkbox" type="checkbox" name="souvenirs" id="souvenirs-field">
+                  <label class="form-field__label" for="souvenirs-field">Накупил сувениров</label>
+                </div>
+                <div class="form-field  form__checkbox  form__checkbox--third">
+                  <input class="form-field__checkbox" type="checkbox" name="tower" id="tower-field" checked>
+                  <label class="form-field__label" for="tower-field">Удержал башню</label>
+                </div>
+                <div class="form-field  form__checkbox  form__checkbox--sixth">
+                  <input class="form-field__checkbox" type="checkbox" name="crush" id="crush-field">
+                  <label class="form-field__label" for="crush-field">Разгромил отель</label>
+                </div>
               </div>
-              <div class="form-field  form__checkbox">
-                <input class="form-field__checkbox" type="checkbox" name="beach" id="beach-field" checked>
-                <label class="form-field__label" for="beach-field">Обгорел на пляже</label>
-              </div>
-              <div class="form-field  form__checkbox">
-                <input class="form-field__checkbox" type="checkbox" name="chuck" id="chuck-field">
-                <label class="form-field__label" for="chuck-field">Видел Чака Норриса</label>
-              </div>
-              <div class="form-field  form__checkbox">
-                <input class="form-field__checkbox" type="checkbox" name="souvenirs" id="souvenirs-field">
-                <label class="form-field__label" for="souvenirs-field">Накупил сувениров</label>
-              </div>
-              <div class="form-field  form__checkbox">
-                <input class="form-field__checkbox" type="checkbox" name="tower" id="tower-field" checked>
-                <label class="form-field__label" for="tower-field">Удержал башню</label>
-              </div>
-              <div class="form-field  form__checkbox">
-                <input class="form-field__checkbox" type="checkbox" name="crush" id="crush-field">
-                <label class="form-field__label" for="crush-field">Разгромил отель</label>
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="form__group">
-            <div class="layout-positioner">
-              <div class="form-field  form__text-field">
-                <label class="form-field__label  form-field__label--text" for="phone-field">Номер телефона</label>
-                <input class="form-field__text-field" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста">
+            <fieldset class="form__group  form__group--third">
+              <legend class="form__subtitle  form__subtitle--mobile-hidden" align="center">Контактная информация</legend>
+              <div class="layout-positioner  layout-positioner--mobile-only  form__group-container">
+                <div class="form-field  form-field--reverse  form-field--half-width  form__text-field">
+                  <label class="form-field__label  form-field__label--text" for="phone-field">Номер телефона</label>
+                  <input class="form-field__text-field" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста">
+                </div>
+                <div class="form-field  form-field--reverse  form-field--half-width  form__text-field">
+                  <label class="form-field__label  form-field__label--text" for="email-field">Адрес почты</label>
+                  <input class="form-field__text-field" type="email" name="email" id="email-field" placeholder="Введите почту *">
+                </div>
               </div>
-              <div class="form-field  form__text-field">
-                <label class="form-field__label  form-field__label--text" for="email-field">Адрес почты</label>
-                <input class="form-field__text-field" type="email" name="email" id="email-field" placeholder="Введите почту *">
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="form__group  form__group--bg-grey">
-            <div class="layout-positioner">
-              <legend class="form__subtitle">С каким приложением путешествовали?</legend>
-              <div class="form-field  form__radio">
-                <input class="form-field__radio" type="radio" name="platform" id="ios-field" value="ios" checked>
-                <label class="form-field__label" for="ios-field">Pink для iOS</label>
+            <fieldset class="form__group  form__group--bg-grey  form__group--second  form__group--half-width">
+              <legend class="form__subtitle" align="center">С каким приложением путешествовали?</legend>
+              <div class="layout-positioner  layout-positioner--mobile-only">
+                <div class="form-field  form__radio">
+                  <input class="form-field__radio" type="radio" name="platform" id="ios-field" value="ios" checked>
+                  <label class="form-field__label" for="ios-field">Pink для iOS</label>
+                </div>
+                <div class="form-field  form__radio">
+                  <input class="form-field__radio" type="radio" name="platform" id="android-field" value="android">
+                  <label class="form-field__label" for="android-field">Pink на Android</label>
+                </div>
+                <div class="form-field  form__radio">
+                  <input class="form-field__radio" type="radio" name="platform" id="windows-field" value="windows">
+                  <label class="form-field__label" for="windows-field">Windows Phone</label>
+                </div>
               </div>
-              <div class="form-field  form__radio">
-                <input class="form-field__radio" type="radio" name="platform" id="android-field" value="android">
-                <label class="form-field__label" for="android-field">Pink на Android</label>
-              </div>
-              <div class="form-field  form__radio">
-                <input class="form-field__radio" type="radio" name="platform" id="windows-field" value="windows">
-                <label class="form-field__label" for="windows-field">Windows Phone</label>
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="form__group">
-            <div class="layout-positioner">
-              <div class="form-field  form__text-field">
-                <label class="form-field__label  form-field__label--text  form-field__label--area" for="emotions-field">Опишите свои эмоции</label>
-                <textarea class="form-field__text-field  form-field__text-field--high" name="emotions" id="emotions-field" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <fieldset class="form__group  form__group--fifth">
+              <legend class="form__subtitle" align="center">Опишите свои эмоции</legend>
+              <div class="layout-positioner  layout-positioner--mobile-only">
+                <div class="form-field  form__text-field">
+                  <textarea class="form-field__text-field  form-field__text-field--high" name="emotions" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                </div>
               </div>
-              <input class="btn  btn--green  form__main-btn" type="submit" value="Отправить форму">
-              <div class="form__footnote"><span class="form__asterisk">*</span> — обязательные поля</div>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
+
+          <div class="layout-positioner  form__buttons">
+            <input class="btn  btn--green  form__main-btn" type="submit" value="Отправить форму">
+            <div class="form__footnote"><span class="form__asterisk">*</span> — обязательные <span class="form__additional-desc">для заполнения </span>поля</div>
+          </div>
 
           <div class="layout-positioner">
             <div class="form__pop-up  form__pop-up--error  js-hidden">
@@ -147,14 +155,14 @@
     </main>
 
     <footer class="main-footer">
-      <div class="layout-positioner">
+      <div class="layout-positioner  main-footer__container">
         <div class="logo  main-footer__logo">
           <a href="index.html" aria-label="Переход на главную страницу"><img src="http://placehold.it/147x40" alt="Pink"></a>
         </div>
         <div class="socials  main-footer__socials">
-          <a class="social-btn social-btn--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
-          <a class="social-btn social-btn--facebook" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
-          <a class="social-btn social-btn--youtube" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
+          <a class="social-btn  social-btn--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
+          <a class="social-btn  social-btn--facebook" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
+          <a class="social-btn  social-btn--youtube" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
         </div>
         <div class="copyright  main-footer__copyright">
           <span class="copyright__label">Разработано</span>

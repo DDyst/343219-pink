@@ -2,3 +2,9 @@
   color: $bg-primary;
   background-color: $color-primary;
 }
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

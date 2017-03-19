@@ -1,7 +1,8 @@
 .btn {
   display: block;
   box-sizing: border-box;
-  width: 280px;
+  width: 100%;
+  max-width: 300px;
   padding-top: 16px;
   padding-bottom: 15px;
   font-weight: normal;
@@ -32,5 +33,24 @@
     background-color: #2aab6d;
     border: none;
     border-radius: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .btn {
+    &--compressible {
+      width: 260px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .btn {
+    &--white {
+      font-size: 21px;
+    }
+    &--compressible {
+      width: 183px;
+    }
   }
 }

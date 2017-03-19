@@ -1,0 +1,45 @@
+.research {
+  background-color: $bg-primary;
+}
+
+.research__content {
+  width: 47.7419%;
+  min-height: 434px; /*!!!!!!!!!*/
+  margin-right: 2.2581%;
+  padding-left: 50%;
+}
+
+.research__title {
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  font-family: $font-bold;
+  color: $color-caption;
+}
+
+.research__link {
+  color: $color-secondary;
+}
+
+@media (min-width: $desktop-width) {
+  .research {
+    background-color: $bg-secondary;
+  }
+
+  .research__content {
+    width: auto;
+    min-height: 460px; /*!!!!!!!!!!!!*/
+    padding-left: 370px;
+  }
+
+  .research__text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
