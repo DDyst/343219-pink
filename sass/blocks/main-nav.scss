@@ -1,3 +1,7 @@
+.main-nav {
+  min-height: 325px;  /*!!!!!!!!!!!!*/
+}
+
 .main-nav__menu {
   &--closed {
     background-color: rgba(0, 0, 0, 0.3);
@@ -5,13 +9,41 @@
 }
 
 .main-nav__list {
-  margin: 0;
-  padding: 0;
+  @include list-clean;
 }
 
 .main-nav__link {
   font-size: $font-size-bigger;
   line-height: 32px;
   font-family: $font-bold;
+  text-decoration: none;
   color: $bg-primary;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    min-height: 365px;  /*!!!!!!!!!!!!*/
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 110px; /*!!!!!!!!!!!!*/
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .main-nav__link {
+    line-height: 18px;
+    font-family: $font-reg;
+  }
 }

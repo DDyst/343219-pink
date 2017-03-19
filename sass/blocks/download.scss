@@ -7,8 +7,44 @@
   background-color: #1d2631;
 }
 
+.download__text {
+  display: none;
+}
+
 .download__desc {
   font-size: $font-size-primary;
   line-height: 24px;
   font-family: $font-light;
+}
+
+.download__btn {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .download {
+    width: 300px;
+    padding-top: 0;
+    background-color: transparent;
+  }
+
+  .download__text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 48px;
+    font-family: $font-light;
+  }
+
+  .download__desc {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download__text {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }

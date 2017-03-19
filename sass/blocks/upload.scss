@@ -1,13 +1,17 @@
 .upload {
-  padding-top: 22px;
+  padding-top: 24px;
 }
 
 .upload__form {
+  box-sizing: border-box;
+  min-height: 757px; /*!!!!!!!!!!!!*/
   padding-top: 20px;
   background-color: $bg-secondary;
 }
 
 .upload__desc {
+  margin-top: 0;
+  margin-bottom: 46px;
   line-height: 30px;
   text-align: center;
 }
@@ -20,4 +24,38 @@
 
 .upload__btn {
   margin-bottom: 12px;
+}
+
+@media (min-width: $tablet-width) {
+  .upload {
+    padding-top: 48px;
+  }
+
+  .upload__desc {
+    margin-bottom: 68px;
+    font-size: 18px;
+  }
+
+  .upload__form {
+    min-height: 511px; /*!!!!!!!!!!!!!!!!!!!*/
+  }
+
+  .upload__wrap {
+    display: flex;
+  }
+
+  .upload__btn {
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .upload__form {
+    min-height: 514px;
+  }
+
+  .upload__buttons {
+    display: flex;
+  }
 }

@@ -1,11 +1,12 @@
 .features {
+  min-height: 1002px; /*!!!!!!!!!!!!!*/
   text-align: center;
   background-color: $bg-secondary;
 }
 
 .features__header {
   padding-top: 46px;
-  padding-bottom: 20px;
+  padding-bottom: 34px;
   background-color: $bg-primary;
 }
 
@@ -15,6 +16,15 @@
   font-size: $font-size-biggest;
   line-height: 24px;
   font-family: $font-light;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.features__container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .features__list {
@@ -29,6 +39,7 @@
   font-size: $font-size-bigger;
   line-height: 24px;
   font-family: $font-bold;
+  color: $color-caption;
 }
 
 .features__desc {
@@ -38,7 +49,89 @@
 }
 
 .features__img {
-  vertical-align: top;
-  max-width: 100%;
-  height: auto;
+  &:not(&--always-shown) {
+    display: none;
+  }
+}
+
+.features__img img {
+  @include image;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    min-height: 725px;
+  }
+
+  .features__header {
+    padding-bottom: 48px;
+  }
+
+  .features__slogan {
+    margin: 0;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .features__container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .features__list {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    min-height: 950px;
+  }
+
+  .features__header {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .features__slogan {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .features__container {
+    flex-direction: column-reverse;
+  }
+
+  .features__illustrations {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .features__img {
+    &:not(&--always-shown) {
+      display: block;
+    }
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+  }
+
+  .features__item {
+    width: 240px;
+    text-align: center;
+  }
+
+  .features__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .features__desc {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

@@ -1,11 +1,20 @@
+.form {
+  padding-top: 46px;
+}
+
 .form__desc {
-  margin-top: 6px;
-  margin-bottom: 46px;
+  margin: 0;
   line-height: 30px;
   text-align: center;
 }
 
+.form__additional-desc {
+  display: none;
+}
+
 .form__group {
+  box-sizing: border-box;
+  margin: 0;
   padding: 38px 0 18px 0;
   border: none;
   &--bg-grey {
@@ -15,10 +24,16 @@
 
 .form__subtitle {
   margin-bottom: 36px;
+  padding: 0 24px;
+  font-weight: normal;
+  font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: $color-secondary;
+  &--mobile-hidden {
+    display: none;
+  }
 }
 
 .form__text-field {
@@ -40,8 +55,7 @@
 }
 
 .form__main-btn {
-  margin-top: 48px;
-  margin-bottom: 40px;
+  margin: 0 auto;
 }
 
 .form__footnote {
@@ -80,4 +94,113 @@
   padding-top: 48px;
   padding-bottom: 52px;
   background-color: $bg-secondary;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    padding-top: 90px;
+  }
+
+  .form__desc {
+    width: 82%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+
+  .form__additional-desc {
+    &--tablet {
+      display: initial;
+    }
+  }
+
+  .form__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__group {
+    margin-bottom: 50px;
+    padding: 38px 58px 18px 58px;
+    background-color: $bg-primary;
+    border: 2px groove #e5e5e5;
+    &--second {
+      order: 2;
+    }
+    &--third {
+      order: 3;
+    }
+    &--fourth {
+      order: 4;
+    }
+    &--fifth {
+      order: 5;
+    }
+    &--no-border {
+      padding: 38px 0 18px 0;
+      border: none;
+    }
+  }
+
+  .form__subtitle {
+    margin: 0;
+    line-height: 30px;
+    &--mobile-hidden {
+      display: table;
+    }
+  }
+
+  .form__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__main-btn {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__additional-desc {
+    display: initial;
+  }
+
+  .form__container {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .form__group {
+    width: 100%;
+    &--half-width {
+      width: 435px;
+      padding: 38px 0 18px 0;
+    }
+  }
+
+  .form__group-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__checkbox {
+    width: 260px;
+    &--second {
+      order: 2;
+    }
+    &--third {
+      order: 3;
+    }
+    &--fourth {
+      order: 4;
+    }
+    &--fifth {
+      order: 5;
+    }
+    &--sixth {
+      order: 6;
+    }
+  }
 }

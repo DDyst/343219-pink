@@ -1,25 +1,41 @@
 .prices {
+  box-sizing: border-box;
+  min-height: 446px; /*!!!!!!!!!!!!*/
   padding-top: 66px;
   padding-bottom: 47px;
   background-color: $bg-secondary;
   text-transform: uppercase;
 }
 
-.prices__slides {
-  margin-bottom: 40px;
+.prices__slider {
+  overflow: hidden;
 }
 
-.prices__slide {
-  border-right: 2px solid #e5e5e5;
-  border-left: 2px solid #e5e5e5;
+.prices__slides {
+  position: relative;
+  left: -81.25%;
+  width: 262.5%;
+  margin-bottom: 40px;
+  border-collapse: collapse;
 }
 
 .prices__header {
   padding: 19px 0;
+  font-weight: normal;
   line-height: 30px;
-  text-align: center;
   color: $bg-primary;
   background-color: $color-primary;
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+  &--empty {
+    display: none;
+  }
+  &:nth-child(2) {
+    border-left: 2px solid $color-primary;
+  }
+  &:last-child {
+    border-right: 2px solid $color-primary;
+  }
 }
 
 .prices__title {
@@ -35,5 +51,69 @@
 .prices__feature {
   padding: 15px 0 14px 22px;
   background-color: $bg-primary;
-  border-bottom: 2px solid #e5e5e5;
+  border: 2px solid #e5e5e5;
+  &--mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .prices {
+    min-height: 378px; /*!!!!!!!!!!!!*/
+  }
+
+  .prices__slides {
+    position: static;
+    width: 100%;
+  }
+
+  .prices__header {
+    width: 25%;
+    &--empty {
+      display: table-cell;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  .prices__title {
+    font-size: 16px;
+  }
+
+  .prices__price {
+    font-size: 18px;
+  }
+
+  .prices__feature {
+    text-transform: none;
+    &--mobile-hidden {
+      display: table-cell;
+    }
+  }
+
+  .prices__feature-text {
+    display: none;
+  }
+
+  .prices__slider-controls {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .prices {
+    min-height: 524px;  /*!!!!!!!!!!!!!!*/
+  }
+
+  .prices__title {
+    font-size: 18px;
+  }
+
+  .prices__price {
+    font-size: 24px;
+  }
+
+  .prices__feature {
+    font-size: 18px;
+  }
 }

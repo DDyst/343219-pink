@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
-    <header class="main-header">
+    <header class="main-header  page__main-header">
       <div class="layout-positioner">
         <h1 class="visually-hidden">Приложение «Pink»</h1>
         <nav class="main-nav">
@@ -37,25 +37,29 @@
       <section class="photos">
         <div class="layout-positioner">
           <h2 class="visually-hidden">Изображения, загруженные другими пользователями</h2>
-          <p class="photos__desc">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
-          <div class="photos__list">
-            <div class="photo-item  photos__item">
-              <div class="photo-item__img  photo-item__img--panoramic">
-                <a href="#"><img src="http://placehold.it/320x137" alt="Изображение другого пользователя"></a>
-              </div>
-              <div class="photo-item__desc">
+          <p class="photos__desc">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не&nbsp;хватает ваших?</p>
+        </div>
+        <div class="photos__list">
+          <div class="photo-item  photo-item--panoramic  photos__panorama">
+            <div class="photo-item__img  photo-item__img--panoramic">
+              <a href="#"><img src="http://placehold.it/320x137" alt="Изображение другого пользователя"></a>
+            </div>
+            <div class="layout-positioner">
+              <div class="photo-item__desc  photo-item__desc--panoramic">
                 <div class="photo-item__title">
                   <b class="photo-item__author">Анна</b>
                   <span class="photo-item__time">(5 минут назад)</span>
                 </div>
-                <p class="photo-item__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <p class="photo-item__text  photo-item__text--pressed-down">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
                 <div class="photo-item__likes">
                   <div class="photo-item__heart"></div>
                   <div class="photo-item__likes-value">Нравится: 215</div>
                 </div>
               </div>
             </div>
+          </div>
 
+          <div class="layout-positioner  photos__container">
             <div class="photo-item  photos__item">
               <div class="photo-item__img">
                 <a href="#"><img src="http://placehold.it/280x180" alt="Изображение другого пользователя"></a>
@@ -167,36 +171,38 @@
           <p class="upload__desc">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         </div>
         <form class="upload__form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
-          <div class="layout-positioner">
+          <div class="layout-positioner  upload__wrap">
             <div class="upload__picture">
               <input type="file" name="picture">
             </div>
-            <div class="upload__filters">
-              <div class="upload__filter">
-                <input class="upload__filter-btn" type="radio" name="filter" id="crop-btn" value="crop" checked>
-                <label class="upload__label  upload__label--crop" for="crop-btn"><span class="visually-hidden">Вырезать</span></label>
+            <div class="upload__container">
+              <div class="upload__filters">
+                <div class="upload__filter">
+                  <input class="upload__filter-btn" type="radio" name="filter" id="crop-btn" value="crop" checked>
+                  <label class="upload__label  upload__label--crop" for="crop-btn"><span class="visually-hidden">Вырезать</span></label>
+                </div>
+                <div class="upload__filter">
+                  <input class="upload__filter-btn" type="radio" name="filter" id="fill-btn" value="fill">
+                  <label class="upload__label  upload__label--fill" for="fill-btn"><span class="visually-hidden">Заливка</span></label>
+                </div>
+                <div class="upload__filter">
+                  <input class="upload__filter-btn" type="radio" name="filter" id="contrast-btn" value="contrast">
+                  <label class="upload__label  upload__label--contrast" for="contrast-btn"><span class="visually-hidden">Контрастность</span></label>
+                </div>
               </div>
-              <div class="upload__filter">
-                <input class="upload__filter-btn" type="radio" name="filter" id="fill-btn" value="fill">
-                <label class="upload__label  upload__label--fill" for="fill-btn"><span class="visually-hidden">Заливка</span></label>
+              <div class="range-slider  upload__slider">
+                <input class="range-slider__input" type="range" name="crop-slider" id="crop-field">
               </div>
-              <div class="upload__filter">
-                <input class="upload__filter-btn" type="radio" name="filter" id="contrast-btn" value="contrast">
-                <label class="upload__label  upload__label--contrast" for="contrast-btn"><span class="visually-hidden">Контрастность</span></label>
+              <div class="range-slider  upload__slider">
+                <input class="range-slider__input" type="range" name="fill-slider" id="fill-field">
               </div>
-            </div>
-            <div class="range-slider  upload__slider">
-              <input class="range-slider__input" type="range" name="crop-slider" id="crop-field">
-            </div>
-            <div class="range-slider  upload__slider">
-              <input class="range-slider__input" type="range" name="fill-slider" id="fill-field">
-            </div>
-            <div class="range-slider  upload__slider">
-              <input class="range-slider__input" type="range" name="contrast-slider" id="contrast-field">
-            </div>
-            <div class="upload__buttons">
-              <input class="btn  upload__btn" type="submit" value="Запостить">
-              <input class="btn  btn--gray  upload__btn" type="reset" value="Отмена">
+              <div class="range-slider  upload__slider">
+                <input class="range-slider__input" type="range" name="contrast-slider" id="contrast-field">
+              </div>
+              <div class="upload__buttons">
+                <input class="btn  btn--compressible  upload__btn" type="submit" value="Запостить">
+                <input class="btn  btn--compressible  btn--gray  upload__btn" type="reset" value="Отмена">
+              </div>
             </div>
           </div>
         </form>
@@ -204,14 +210,14 @@
     </main>
 
     <footer class="main-footer">
-      <div class="layout-positioner">
+      <div class="layout-positioner  main-footer__container">
         <div class="logo  main-footer__logo">
           <a href="index.html" aria-label="Переход на главную страницу"><img src="http://placehold.it/147x40" alt="Pink"></a>
         </div>
         <div class="socials  main-footer__socials">
-          <a class="social-btn social-btn--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
-          <a class="social-btn social-btn--facebook" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
-          <a class="social-btn social-btn--youtube" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
+          <a class="social-btn  social-btn--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
+          <a class="social-btn  social-btn--facebook" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
+          <a class="social-btn  social-btn--youtube" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
         </div>
         <div class="copyright  main-footer__copyright">
           <span class="copyright__label">Разработано</span>
