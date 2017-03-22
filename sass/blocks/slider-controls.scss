@@ -35,3 +35,11 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slider-controls {
+    &--desktop-inactive {
+      display: none;
+    }
+  }
+}
