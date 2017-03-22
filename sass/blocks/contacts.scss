@@ -1,6 +1,6 @@
 .contacts {
   box-sizing: border-box;
-  min-height: 410px; /*!!!!!!!!!!!!*/
+  min-height: 414px; /*!!!!!!!!!!!!*/
   padding-top: 40px;
   padding-bottom: 16px;
   text-align: center;
@@ -37,7 +37,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    min-height: 400px; /*!!!!!!!!!!*/
+    min-height: 401px; /*!!!!!!!!!!*/
   }
 
   .contacts__desc {

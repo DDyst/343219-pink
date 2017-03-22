@@ -1,18 +1,17 @@
 .features {
-  min-height: 1002px; /*!!!!!!!!!!!!!*/
   text-align: center;
   background-color: $bg-secondary;
 }
 
 .features__header {
-  padding-top: 46px;
-  padding-bottom: 34px;
+  padding-top: 34px;
+  padding-bottom: 32px;
   background-color: $bg-primary;
 }
 
 .features__slogan {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: $font-size-biggest;
   line-height: 24px;
   font-family: $font-light;
@@ -28,7 +27,7 @@
 }
 
 .features__list {
-  padding-top: 50px;
+  padding-top: 36px;
   padding-bottom: 10px;
 }
 
@@ -60,7 +59,7 @@
 
 @media (min-width: $tablet-width) {
   .features {
-    min-height: 725px;
+    min-height: 725px; /*!!!!!!!!!!!!!!!*/
   }
 
   .features__header {

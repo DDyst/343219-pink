@@ -1,6 +1,6 @@
 .prices {
   box-sizing: border-box;
-  min-height: 446px; /*!!!!!!!!!!!!*/
+  min-height: 471px; /*!!!!!!!!!!!!*/
   padding-top: 66px;
   padding-bottom: 47px;
   background-color: $bg-secondary;
@@ -11,12 +11,20 @@
   overflow: hidden;
 }
 
-.prices__slides {
+.prices__table {
   position: relative;
-  left: -81.25%;
   width: 262.5%;
   margin-bottom: 40px;
   border-collapse: collapse;
+  &--first-slide {
+    left: 6.25%;
+  }
+  &--second-slide {
+    left: -81.25%;
+  }
+  &--third-slide {
+    left: -168.75%;
+  }
 }
 
 .prices__header {
@@ -62,7 +70,7 @@
     min-height: 378px; /*!!!!!!!!!!!!*/
   }
 
-  .prices__slides {
+  .prices__table {
     position: static;
     width: 100%;
   }
@@ -92,10 +100,6 @@
   }
 
   .prices__feature-text {
-    display: none;
-  }
-
-  .prices__slider-controls {
     display: none;
   }
 }

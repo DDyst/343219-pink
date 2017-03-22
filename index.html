@@ -18,7 +18,7 @@
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Развернуть/свернуть меню</span></button>
           </div>
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current"><span class="main-nav__current-page">Главная</span></a></li>
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
@@ -137,7 +137,7 @@
         <div class="layout-positioner  layout-positioner--mobile-inactive">
           <h2 class="visually-hidden">Расценки</h2>
           <div class="prices__slider">
-            <table class="prices__slides">
+            <table class="prices__table  prices__table--second-slide">
               <tr>
                 <th class="prices__header  prices__header--empty"></th>
                 <th class="prices__header">
@@ -173,10 +173,10 @@
               </tr>
             </table>
 
-            <div class="slider-controls  prices__slider-controls">
-              <i class="slider-controls__item"></i>
-              <i class="slider-controls__item  slider-controls__item--active"></i>
-              <i class="slider-controls__item"></i>
+            <div class="slider-controls  slider-controls--mobile-only  prices__slider-controls">
+              <i class="slider-controls__item  slider-controls__item--darker  prices__slider-controls-item  prices__slider-controls-item--first"></i>
+              <i class="slider-controls__item  slider-controls__item--darker  slider-controls__item--active  prices__slider-controls-item  prices__slider-controls-item--second"></i>
+              <i class="slider-controls__item  slider-controls__item--darker  prices__slider-controls-item  prices__slider-controls-item--third"></i>
             </div>
           </div>
         </div>
