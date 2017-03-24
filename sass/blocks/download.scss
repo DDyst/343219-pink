@@ -17,6 +17,15 @@
 
 .download__list {
   @include list-clean;
+  display: flex;
+  justify-content: space-around; /*!!!!!!!!!!!!!!!*/
+}
+
+.download__link {
+  display: block;
+  width: 47px;
+  height: 56px;
+  background-color: fuchsia; /*!!!!!!!!!!!!!*/
 }
 
 .download__desc {
@@ -41,6 +50,12 @@
     font-family: $font-light;
   }
 
+  .download__link {
+    &--android {
+      opacity: 0.4;
+    }
+  }
+
   .download__desc {
     font-size: 18px;
   }
@@ -50,5 +65,11 @@
   .download__text {
     font-size: 50px;
     line-height: 60px;
+  }
+
+  .download__link {
+    &--android {
+      opacity: initial;
+    }
   }
 }

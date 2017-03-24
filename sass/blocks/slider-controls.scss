@@ -14,6 +14,12 @@
   &--darker {
     box-shadow: inset 0 0 0 3px #b5b9be;
   }
+  &:not(&--active):hover {
+    box-shadow: inset 0 0 0 3px #7e868f;
+  }
+  &:not(&--active):active {
+    box-shadow: inset 0 0 0 3px #e9ebec;
+  }
   &--active {
     width: 12px;
     height: 12px;

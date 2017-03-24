@@ -1,0 +1,9 @@
+.socials {
+  display: flex;
+}
+
+.socials__btn {
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+}

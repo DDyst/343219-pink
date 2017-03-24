@@ -1,19 +1,20 @@
 .reviews {
   box-sizing: border-box;
   min-height: 352px; /*!!!!!!!!!!!!*/
-  padding-top: 46px;
-  padding-bottom: 66px;
+  padding-top: 33px;
+  padding-bottom: 39px;
   text-align: center;
 }
 
 .reviews__slide {
+  margin-bottom: 34px;
   &--hidden {
     display: none;
   }
 }
 
 .reviews__author {
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .reviews__title {

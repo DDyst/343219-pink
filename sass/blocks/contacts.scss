@@ -33,6 +33,14 @@
 .contacts__link {
   color: inherit;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $color-primary;
+  }
+  &:active {
+    text-decoration: none;
+    color: rgba($color-primary, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
