@@ -38,11 +38,31 @@
   &--empty {
     display: none;
   }
+  &--hit {
+    padding: 0;
+  }
   &:nth-child(2) {
     border-left: 2px solid $color-primary;
   }
   &:last-child {
     border-right: 2px solid $color-primary;
+  }
+}
+
+.prices__hit {
+  position: relative;
+  padding: 19px 0;
+  background: url("../img/bg-hit.svg") no-repeat 0 0;
+  background-size: 74px 73px;
+  &::after {
+    content: "Хит";
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    font-family: $font-bold;
+    text-transform: uppercase;
+    color: $bg-primary;
+    transform: rotate(-45deg);
   }
 }
 
@@ -58,10 +78,16 @@
 
 .prices__feature {
   padding: 15px 0 14px 22px;
-  background-color: $bg-primary;
+  background: $bg-primary url("../img/icon-no.svg") no-repeat 82.7338% 15px;
+  background-size: 27px 26px;
   border: 2px solid #e5e5e5;
+  &--available {
+    background: $bg-primary url("../img/icon-yes.svg") no-repeat 82.0143% 20px;
+    background-size: 31px 21px;
+  }
   &--mobile-hidden {
     display: none;
+    background-image: none;
   }
 }
 
@@ -84,6 +110,15 @@
     }
   }
 
+  .prices__hit {
+    background: url("../img/bg-hit-tablet.svg") no-repeat 0 0;
+    background-size: 61px 61px;
+    &::after {
+      top: 5px;
+      left: 7px;
+    }
+  }
+
   .prices__title {
     font-size: 16px;
   }
@@ -94,6 +129,7 @@
 
   .prices__feature {
     text-transform: none;
+    background-position: center;
     &--mobile-hidden {
       display: table-cell;
     }
@@ -107,6 +143,15 @@
 @media (min-width: $desktop-width) {
   .prices {
     min-height: 524px;  /*!!!!!!!!!!!!!!*/
+  }
+
+  .prices__hit {
+    background: url("../img/bg-hit.svg") no-repeat 0 0;
+    background-size: 74px 73px;
+    &::after {
+      top: 13px;
+      left: 11px;
+    }
   }
 
   .prices__title {

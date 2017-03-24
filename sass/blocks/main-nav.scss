@@ -20,6 +20,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
   transform: rotate(45deg);
   &::before {
     content: "";

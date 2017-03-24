@@ -4,6 +4,15 @@
   height: 45px;
   border: 3px solid #e9ebec;
   border-radius: 50%;
+  &--twitter {
+    background: url("../img/icon-twitter.svg") no-repeat center;
+  }
+  &--facebook {
+    background: url("../img/icon-facebook.svg") no-repeat center;
+  }
+  &--youtube {
+    background: url("../img/icon-youtube.svg") no-repeat center;
+  }
   &:hover {
     border-color: $color-primary;
   }

@@ -70,7 +70,8 @@
     left: 9px;
     width: 22px;
     height: 16px;
-    background-color: #000; /*!!!!!!!!!!!!!*/
+    background: url("../img/checkbox-checked.svg") no-repeat center;
+    background-size: 22px 16px;
     transform: translateY(-50%);
   }
 }
