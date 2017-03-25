@@ -1,7 +1,6 @@
 .download {
   box-sizing: border-box;
-  min-height: 271px;
-  padding-top: 28px;
+  padding: 29px 0;
   text-align: center;
   color: $bg-primary;
   background-color: #1d2631;
@@ -11,14 +10,45 @@
   display: none;
 }
 
+.download__btn {
+  margin: 0 auto;
+}
+
+.download__list {
+  @include list-clean;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 205px;
+  margin: 20px auto;
+}
+
+.download__link {
+  display: block;
+  &--apple {
+    width: 47px;
+    height: 56px;
+    background: url("../img/logo-apple.svg") no-repeat center;
+    background-size: 47px 56px;
+  }
+  &--android {
+    width: 43px;
+    height: 47px;
+    background: url("../img/logo-android.svg") no-repeat center;
+    background-size: 43px 47px;
+  }
+  &--windows {
+    width: 44px;
+    height: 41px;
+    background: url("../img/logo-microsoft.svg") no-repeat center;
+    background-size: 44px 41px;
+  }
+}
+
 .download__desc {
   font-size: $font-size-primary;
   line-height: 24px;
   font-family: $font-light;
-}
-
-.download__btn {
-  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -37,6 +67,12 @@
     font-family: $font-light;
   }
 
+  .download__link {
+    &--android {
+      opacity: 0.4;
+    }
+  }
+
   .download__desc {
     font-size: 18px;
   }
@@ -46,5 +82,11 @@
   .download__text {
     font-size: 50px;
     line-height: 60px;
+  }
+
+  .download__link {
+    &--android {
+      opacity: initial;
+    }
   }
 }

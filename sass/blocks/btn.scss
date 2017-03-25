@@ -16,13 +16,36 @@
   border: 3px solid $color-secondary;
   border-radius: 24px;
   cursor: pointer;
+  &:hover {
+    color: $bg-primary;
+    background-color: $color-secondary;
+  }
+  &:active {
+    color: rgba($color-primary, 0.3);
+  }
   &--white {
     color: $bg-primary;
     border-color: $bg-primary;
+    &:hover {
+      color: $color-secondary;
+      background-color: $bg-primary;
+    }
+    &:active {
+      color: rgba($color-secondary, 0.3);
+    }
   }
   &--gray {
     color: rgba($color-primary, 0.1);
     border-color: #dddfe0;
+    &:hover {
+      color: rgba($color-primary, 0.3);
+      background-color: inherit;
+      border-color: #b5b9be;
+    }
+    &:active {
+      color: rgba($bg-primary, 0.3);
+      background-color: #b5b9be;
+    }
   }
   &--green {
     padding-top: 17px;
@@ -33,6 +56,15 @@
     background-color: #2aab6d;
     border: none;
     border-radius: 2px;
+    &:hover {
+      background-color: #1c9b5e;
+    }
+    &:active {
+      color: rgba($bg-primary, 0.3);
+    }
+    &:disabled {
+      background-color: #e5e5e5;
+    }
   }
 }
 

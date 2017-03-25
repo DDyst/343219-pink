@@ -1,4 +1,6 @@
 .form-field__text-field {
+  margin-top: 4px;
+  font-family: inherit;
   box-sizing: border-box;
   width: 100%;
   padding: 15px 22px 14px 22px;
@@ -10,15 +12,112 @@
     height: 201px;
     margin-top: 16px;
   }
+  &:hover {
+    border-color: $color-primary;
+  }
+  &:focus {
+    border-color: $color-secondary;
+  }
 }
 
 .form-field__label {
+  padding-left: 23px;
   font-size: $font-size-bigger;
   line-height: 30px;
+  cursor: pointer;
   &--text {
     font-size: $font-size-primary;
     text-transform: uppercase;
     color: $color-secondary;
+  }
+}
+
+.form-field__checkbox {
+  display: none;
+}
+
+.form-field__checkbox + .form-field__label {
+  position: relative;
+  padding-left: 70px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: $bg-primary;
+    border: 2px solid #e5e5e5;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    &::before {
+      border-color: $color-primary;
+    }
+  }
+  &:active {
+    &::before {
+      border-color: $color-secondary;
+    }
+  }
+}
+
+.form-field__checkbox:checked + .form-field__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    width: 22px;
+    height: 16px;
+    background: url("../img/checkbox-checked.svg") no-repeat center;
+    background-size: 22px 16px;
+    transform: translateY(-50%);
+  }
+}
+
+.form-field__radio {
+  display: none;
+}
+
+.form-field__radio + .form-field__label {
+  position: relative;
+  padding-left: 70px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: $bg-primary;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    &::before {
+      border-color: $color-primary;
+    }
+  }
+  &:active {
+    &::before {
+      border-color: $color-secondary;
+    }
+  }
+}
+
+.form-field__radio:checked + .form-field__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -32,6 +131,14 @@
       display: flex;
       flex-direction: column-reverse;
     }
+  }
+
+  .form-field__checkbox + .form-field__label {
+    padding-left: 60px;
+  }
+
+  .form-field__radio + .form-field__label {
+    padding-left: 60px;
   }
 }
 

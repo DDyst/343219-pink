@@ -3,12 +3,18 @@
   &--mobile-inactive {
     padding: 0;
   }
+  &--desktop-only {
+    padding: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .layout-positioner {
     padding: 0 3.0303%;
     &--mobile-only {
+      padding: 0;
+    }
+    &--desktop-only {
       padding: 0;
     }
   }

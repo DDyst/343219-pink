@@ -1,7 +1,7 @@
 .intro {
   box-sizing: border-box;
   min-height: 237px; /*!!!!!!!!!!!*/
-  padding-top: 90px;
+  padding-top: 96px;
   text-align: center;
   color: $bg-primary;
   background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
@@ -20,6 +20,7 @@
 }
 
 .intro__title {
+  margin: 0;
   font-weight: normal;
   font-size: $font-size-biggest;
   line-height: 29px;

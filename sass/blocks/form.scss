@@ -1,9 +1,10 @@
 .form {
-  padding-top: 46px;
+  padding-top: 44px;
 }
 
 .form__desc {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
   line-height: 30px;
   text-align: center;
 }
@@ -15,7 +16,7 @@
 .form__group {
   box-sizing: border-box;
   margin: 0;
-  padding: 38px 0 18px 0;
+  padding: 24px 0 27px 0;
   border: none;
   &--bg-grey {
     background-color: $bg-secondary;
@@ -23,7 +24,7 @@
 }
 
 .form__subtitle {
-  margin-bottom: 36px;
+  margin-bottom: 43px;
   padding: 0 24px;
   font-weight: normal;
   font-size: 14px;
@@ -37,11 +38,11 @@
 }
 
 .form__text-field {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .form__checkbox {
-  margin-bottom: 43px;
+  margin-bottom: 52px;
   &:last-child {
     margin-bottom: 24px;
   }
@@ -120,6 +121,7 @@
   }
 
   .form__group {
+    position: relative;
     margin-bottom: 50px;
     padding: 38px 58px 18px 58px;
     background-color: $bg-primary;
@@ -143,8 +145,15 @@
   }
 
   .form__subtitle {
+    position: absolute;
+    top: -15px;
+    left: 50%;
     margin: 0;
+    padding: 0 32px;
     line-height: 30px;
+    white-space: nowrap;
+    background-color: $bg-primary;
+    transform: translateX(-50%);
     &--mobile-hidden {
       display: table;
     }

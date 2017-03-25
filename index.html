@@ -8,7 +8,7 @@
   </head>
   <body class="page">
     <header class="main-header  page__main-header">
-      <div class="layout-positioner">
+      <div class="layout-positioner  layout-positioner--desktop-only">
         <h1 class="visually-hidden">Приложение «Pink»</h1>
         <nav class="main-nav">
           <div class="main-nav__menu">
@@ -42,7 +42,7 @@
               <li class="download__item"><a class="download__link  download__link--android" href="https://play.google.com/store"><span class="visually-hidden"> Скачать для Android</span></a></li>
               <li class="download__item"><a class="download__link  download__link--windows" href="https://www.microsoft.com/ru-ru/store/apps"><span class=" visually-hidden">Скачать для Windows</span></a></li>
             </ul>
-            <p class="download__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <p class="download__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS&nbsp;X, Windows&nbsp;8</p>
           </section>
         </div>
       </div>
@@ -109,26 +109,28 @@
                 </div>
                 <p class="reviews__text"><span class="reviews__quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="reviews__quotes">»</span></p>
               </div>
-              <div class="reviews__slide">
+              <div class="reviews__slide  reviews__slide--hidden">
                 <div class="reviews__author">
                   <h3 class="reviews__title">Lorem ipsum.</h3>
                   <div class="reviews__subtitle">Lorem ipsum dolor sit.</div>
                 </div>
-                <p class="reviews__text"><span class="reviews__quotes">«</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum, voluptates, cum labore perferendis dolore asperiores ipsam iusto commodi laboriosam!<span class="reviews__quotes">»</span></p>
+                <p class="reviews__text"><span class="reviews__quotes">«</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellat quae error cupiditate quisquam inventore earum placeat labore consectetur tempore. Lorem ipsum sit dolor amet adipisicing asperiores.<span class="reviews__quotes">»</span></p>
               </div>
-              <div class="reviews__slide">
+              <div class="reviews__slide  reviews__slide--hidden">
                 <div class="reviews__author">
                   <h3 class="reviews__title">Lorem ipsum.</h3>
                   <div class="reviews__subtitle">Lorem ipsum dolor sit.</div>
                 </div>
-                <p class="reviews__text"><span class="reviews__quotes">«</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellat quae error cupiditate inventore quisquam earum labore placeat consectetur tempore.<span class="reviews__quotes">»</span></p>
+                <p class="reviews__text"><span class="reviews__quotes">«</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellat quae error cupiditate inventore quisquam earum labore placeat consectetur tempore. Lorem ipsum dolor sit amet adipisicing asperiores.<span class="reviews__quotes">»</span></p>
               </div>
             </div>
-            <div class="slider-controls  reviews__slider-controls">
-              <i class="slider-controls__item  slider-controls__item--active"></i>
-              <i class="slider-controls__item"></i>
-              <i class="slider-controls__item"></i>
+            <div class="slider-controls  slider-controls--desktop-inactive  reviews__slider-controls">
+              <i class="slider-controls__item  slider-controls__item--active  reviews__slider-controls-item"></i>
+              <i class="slider-controls__item  reviews__slider-controls-item"></i>
+              <i class="slider-controls__item  reviews__slider-controls-item"></i>
             </div>
+            <div class="reviews__slider-arrow  reviews__slider-arrow--right"></div>
+            <div class="reviews__slider-arrow  reviews__slider-arrow--left"></div>
           </div>
         </div>
       </section>
@@ -137,16 +139,18 @@
         <div class="layout-positioner  layout-positioner--mobile-inactive">
           <h2 class="visually-hidden">Расценки</h2>
           <div class="prices__slider">
-            <table class="prices__slides">
+            <table class="prices__table  prices__table--second-slide">
               <tr>
                 <th class="prices__header  prices__header--empty"></th>
                 <th class="prices__header">
                   <div class="prices__title">База</div>
                   <div class="prices__price">1,99 USD</div>
                 </th>
-                <th class="prices__header">
-                  <div class="prices__title">Стандарт</div>
-                  <div class="prices__price">3,99 USD</div>
+                <th class="prices__header  prices__header--hit">
+                  <div class="prices__hit">
+                    <div class="prices__title">Стандарт</div>
+                    <div class="prices__price">3,99 USD</div>
+                  </div>
                 </th>
                 <th class="prices__header">
                   <div class="prices__title">Анлим</div>
@@ -173,10 +177,10 @@
               </tr>
             </table>
 
-            <div class="slider-controls  prices__slider-controls">
-              <i class="slider-controls__item"></i>
-              <i class="slider-controls__item  slider-controls__item--active"></i>
-              <i class="slider-controls__item"></i>
+            <div class="slider-controls  slider-controls--mobile-only  prices__slider-controls">
+              <i class="slider-controls__item  slider-controls__item--darker  prices__slider-controls-item"></i>
+              <i class="slider-controls__item  slider-controls__item--darker  slider-controls__item--active  prices__slider-controls-item"></i>
+              <i class="slider-controls__item  slider-controls__item--darker  prices__slider-controls-item"></i>
             </div>
           </div>
         </div>
@@ -207,23 +211,24 @@
         <h2 class="visually-hidden">Наш офис на карте</h2>
         <img class="map__img" src="http://placehold.it/320x200" alt="Карта">
       </section>
-
-      <footer class="main-footer  main-footer--index">
-        <div class="layout-positioner  main-footer__container">
-          <div class="logo  main-footer__logo">
-            <a href="index.html" aria-label="Переход на главную страницу"><img src="http://placehold.it/147x40" alt="Pink"></a>
-          </div>
-          <div class="socials  main-footer__socials">
-            <a class="social-btn  social-btn--twitter" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
-            <a class="social-btn  social-btn--facebook" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
-            <a class="social-btn  social-btn--youtube" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
-          </div>
-          <div class="copyright  main-footer__copyright">
-            <span class="copyright__label">Разработано</span>
-            <a class="copyright__link" href="https://htmlacademy.ru/"><span class="visually-hidden">HTML Academy</span></a>
-          </div>
-        </div>
-      </footer>
     </main>
+
+    <footer class="main-footer  main-footer--index">
+      <div class="layout-positioner  main-footer__container">
+        <div class="logo  main-footer__logo">
+          <a href="index.html" aria-label="Переход на главную страницу"><img src="http://placehold.it/147x40" alt="Pink"></a>
+        </div>
+        <div class="socials  main-footer__socials">
+          <a class="social-btn  social-btn--twitter  socials__btn" href="https://twitter.com/" target="_blank"><span class="visually-hidden">Twitter</span></a>
+          <a class="social-btn  social-btn--facebook  socials__btn" href="https://ru-ru.facebook.com/" target="_blank"><span class="visually-hidden">Facebook</span></a>
+          <a class="social-btn  social-btn--youtube  socials__btn" href="https://www.youtube.com/" target="_blank"><span class="visually-hidden">Youtube</span></a>
+        </div>
+        <div class="copyright  main-footer__copyright">
+          <span class="copyright__label">Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

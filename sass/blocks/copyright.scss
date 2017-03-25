@@ -1,3 +1,9 @@
 .copyright__label {
   line-height: 18px;
 }
+
+@media (min-width: $desktop-width) {
+  .copyright__label {
+    font-size: 18px;
+  }
+}
