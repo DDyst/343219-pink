@@ -1,12 +1,16 @@
 .photos {
-  padding-top: 52px;
+  padding-top: 44px;
 }
 
 .photos__desc {
   margin-top: 0;
-  margin-bottom: 54px;
+  margin-bottom: 48px;
   line-height: 30px;
   text-align: center;
+}
+
+.photos__panorama {
+  margin-bottom: 20px;
 }
 
 .photos__item {
@@ -14,10 +18,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .photos {
+    padding-top: 91px;
+  }
+
   .photos__desc {
     width: 71%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto 76px auto;
     font-size: 18px;
   }
 
@@ -51,5 +58,8 @@
     &:nth-of-type(2n) {
       margin-left: 0;
     }
+  }
+  .photos__desc {
+    margin-bottom: 89px;
   }
 }

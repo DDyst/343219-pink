@@ -1,20 +1,44 @@
 .map {
+  position: relative;
+  height: 219px;
   text-align: center;
   background-color: $bg-secondary;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 33px;
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat center -1px;
+    background-size: 100% 33px;
+    pointer-events: none;
+  }
 }
 
 .map__img {
   @include image;
+  position: relative;
+  bottom: 90%;
 }
 
 @media (min-width: $tablet-width) {
   .map {
-    min-height: 378px; /*!!!!!!!!!!!!!!!!*/
+    height: 378px;
+    &::after {
+      height: 72px;
+      background-size: 100% 72px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
-    min-height: 502px; /*!!!!!!!!!!!!!*/
+    height: 500px;
+    &::after {
+      height: 103px;
+      background-size: 100% 103px;
+    }
   }
 }

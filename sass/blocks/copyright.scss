@@ -1,5 +1,25 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
 .copyright__label {
   line-height: 18px;
+}
+
+.copyright__link {
+  display: block;
+  width: 27px;
+  height: 34px;
+  margin-left: 15px;
+  background: url("../img/logo-htmlacademy.svg") no-repeat center;
+  background-size: 27px 34px;
+  &:hover {
+    background-image: url("../img/logo-htmlacademy-hvr.svg");
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $desktop-width) {

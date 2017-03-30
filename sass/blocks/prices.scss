@@ -1,9 +1,8 @@
 .prices {
   box-sizing: border-box;
-  min-height: 471px; /*!!!!!!!!!!!!*/
-  padding-top: 66px;
-  padding-bottom: 47px;
-  background-color: $bg-secondary;
+  padding-top: 90px;
+  padding-bottom: 44px;
+  background: $bg-secondary url("../img/bg-triangle-white.svg") no-repeat center top/contain;
   text-transform: uppercase;
 }
 
@@ -14,7 +13,7 @@
 .prices__table {
   position: relative;
   width: 262.5%;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   border-collapse: collapse;
   &--first-slide {
     left: 6.25%;
@@ -28,7 +27,8 @@
 }
 
 .prices__header {
-  padding: 19px 0;
+  padding-top: 17px;
+  padding-bottom: 21px;
   font-weight: normal;
   line-height: 30px;
   color: $bg-primary;
@@ -51,9 +51,9 @@
 
 .prices__hit {
   position: relative;
-  padding: 19px 0;
-  background: url("../img/bg-hit.svg") no-repeat 0 0;
-  background-size: 74px 73px;
+  padding-top: 17px;
+  padding-bottom: 21px;
+  background: url("../img/bg-hit.svg") no-repeat 0 0/74px auto;
   &::after {
     content: "Хит";
     position: absolute;
@@ -77,12 +77,12 @@
 }
 
 .prices__feature {
-  padding: 15px 0 14px 22px;
-  background: $bg-primary url("../img/icon-no.svg") no-repeat 82.7338% 15px;
+  padding: 17px 0 17px 22px;
+  background: $bg-primary url("../img/icon-no.svg") no-repeat 92% 15px/27px auto;
   background-size: 27px 26px;
   border: 2px solid #e5e5e5;
   &--available {
-    background: $bg-primary url("../img/icon-yes.svg") no-repeat 82.0143% 20px;
+    background: $bg-primary url("../img/icon-yes.svg") no-repeat 92.6% 19px/31px auto;
     background-size: 31px 21px;
   }
   &--mobile-hidden {
@@ -93,7 +93,8 @@
 
 @media (min-width: $tablet-width) {
   .prices {
-    min-height: 378px; /*!!!!!!!!!!!!*/
+    padding-top: 88px;
+    padding-bottom: 31px;
   }
 
   .prices__table {
@@ -102,17 +103,23 @@
   }
 
   .prices__header {
+    padding-top: 10px;
+    padding-bottom: 9px;
     width: 25%;
     &--empty {
       display: table-cell;
       background-color: transparent;
       border: none;
     }
+    &--hit {
+      padding: 0;
+    }
   }
 
   .prices__hit {
-    background: url("../img/bg-hit-tablet.svg") no-repeat 0 0;
-    background-size: 61px 61px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    background: url("../img/bg-hit-tablet.svg") no-repeat 0 0/61px auto;
     &::after {
       top: 5px;
       left: 7px;
@@ -128,6 +135,7 @@
   }
 
   .prices__feature {
+    padding: 10px 0 10px 15px;
     text-transform: none;
     background-position: center;
     &--mobile-hidden {
@@ -142,19 +150,30 @@
 
 @media (min-width: $desktop-width) {
   .prices {
-    min-height: 524px;  /*!!!!!!!!!!!!!!*/
+    padding-top: 145px;
+    padding-bottom: 58px;
+  }
+
+  .prices__header {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    &--hit {
+      padding: 0;
+    }
   }
 
   .prices__hit {
-    background: url("../img/bg-hit.svg") no-repeat 0 0;
-    background-size: 74px 73px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    background: url("../img/bg-hit.svg") no-repeat 0 0/74px auto;
     &::after {
-      top: 13px;
-      left: 11px;
+      top: 11px;
+      left: 10px;
     }
   }
 
   .prices__title {
+    margin-bottom: 2px;
     font-size: 18px;
   }
 
@@ -163,6 +182,7 @@
   }
 
   .prices__feature {
+    padding: 16px 0 18px 22px;
     font-size: 18px;
   }
 }
