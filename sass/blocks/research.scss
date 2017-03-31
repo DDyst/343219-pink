@@ -1,21 +1,42 @@
 .research {
+  padding-top: 94px;
+  padding-bottom: 92px;
   background-color: $bg-primary;
 }
 
 .research__content {
-  width: 47.7419%;
-  min-height: 430px; /*!!!!!!!!!*/
+  position: relative;
   margin-right: 2.2581%;
   padding-left: 50%;
+  &::after {
+    content: "24";
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 238px;
+    height: 276px;
+    font-size: 96px;
+    line-height: 300px;
+    font-family: $font-bold;
+    text-align: center;
+    color: $color-secondary;
+    background:
+      url("../img/icon-editor-diagram-fill.svg") no-repeat center 55px/202px auto,
+      url("../img/icon-timer.svg") no-repeat center/238px auto;
+  }
 }
 
 .research__title {
-  margin-top: 0;
+  margin: 0;
   font-weight: normal;
   font-size: 30px;
   line-height: 36px;
   font-family: $font-bold;
   color: $color-caption;
+}
+
+.research__text {
+  margin: 11px 0;
 }
 
 .research__link {
@@ -24,16 +45,29 @@
 
 @media (min-width: $desktop-width) {
   .research {
+    padding-top: 90px;
+    padding-bottom: 114px;
     background-color: $bg-secondary;
   }
 
   .research__content {
-    width: auto;
-    min-height: 457px; /*!!!!!!!!!!!!*/
-    padding-left: 370px;
+    padding-left: 366px;
+    &::after {
+    top: -90px;
+    left: 0;
+    width: 298px;
+    height: 345px;
+    font-size: 120px;
+    line-height: 380px;
+    background:
+      url("../img/icon-editor-diagram-fill.svg") no-repeat center 69px/253px auto,
+      url("../img/icon-timer.svg") no-repeat center/298px auto;
+    }
   }
 
   .research__text {
+    margin-top: 22px;
+    margin-bottom: 30px;
     font-size: 18px;
     line-height: 30px;
   }

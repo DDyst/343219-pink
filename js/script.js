@@ -126,3 +126,21 @@ reviewsArrowLeft.addEventListener("click", function(event) {
     reviewsSlideSecond.classList.remove("reviews__slide--hidden");
   }
 });
+
+// Интерактивная карта
+function initMap() {
+  var mapCanvas = document.querySelector(".map");
+  var mapOptions = {
+    center: new google.maps.LatLng(59.9385603,30.3229597),
+    zoom: 17,
+    disableDefaultUI: true
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var image = "../img/icon-map-marker.svg";
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(59.9385603,30.3229597),
+    map: map,
+    icon: image
+  });
+}
+google.maps.event.addDomListener(window, "load", initMap);

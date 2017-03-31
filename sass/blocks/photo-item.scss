@@ -1,21 +1,44 @@
 .photo-item {
   line-height: 24px;
   &:not(&--panoramic) {
-    width: 100%;
-    max-width: 300px;
+    width: 280px;
+  }
+  &--panoramic {
+    overflow: hidden;
   }
 }
 
 .photo-item__img {
-  text-align: center;
-  img {
-    @include image;
+  &--panoramic {
+    position: relative;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+    &::after {
+      content: "Панорама дня";
+      position: absolute;
+      top: 0;
+      right: 6.25%;
+      width: 140px;
+      height: 36px;
+      font-size: 12px;
+      line-height: 36px;
+      font-family: $font-bold;
+      text-align: center;
+      text-transform: uppercase;
+      color: $bg-primary;
+      background-color: $color-secondary;
+    }
   }
+}
+
+.photo-item__img img {
+  @include image;
 }
 
 .photo-item__desc {
   box-sizing: border-box;
-  padding: 22px 18px 23px 18px;
+  padding: 18px 18px 20px 18px;
   background-color: $bg-secondary;
 }
 
@@ -27,11 +50,12 @@
 .photo-item__time {
   font-size: $font-size-smaller;
   font-family: $font-light;
+  text-transform: uppercase;
 }
 
 .photo-item__text {
   margin-top: 0;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 
 .photo-item__likes {
@@ -44,6 +68,7 @@
   height: 12px;
   margin-right: 19px;
   background: url("../img/icon-heart.svg") no-repeat center;
+  cursor: pointer;
 }
 
 .photo-item__likes-value {
@@ -53,16 +78,25 @@
 }
 
 @media (min-width: $tablet-width) {
+  .photo-item {
+    &:not(&--panoramic) {
+      width: 300px;
+    }
+  }
   .photo-item__img {
-    min-height: 300px; /*!!!!!!!!!!!!*/
     &--panoramic {
-      min-height: 509px; /*!!!!!!!!!!!!!!!*/
+      width: 700px;
+      &::after {
+        top: 57px;
+      }
     }
   }
 
   .photo-item__desc {
     display: flex;
+    padding: 24px 32px 22px 28px;
     &--panoramic {
+      padding: 24px 28px 14px 28px;
       flex-wrap: wrap;
       justify-content: space-between;
     }
@@ -92,9 +126,12 @@
 
 @media (min-width: $desktop-width) {
   .photo-item__img {
-    min-height: 400px; /*!!!!!!!!!!!!!*/
     &--panoramic {
-      min-height: 506px; /*!!!!!!!!!!!!!!!*/
+      width: 1200px;
+      &::after {
+        top: 54px;
+        right: 130px;
+      }
     }
   }
 }

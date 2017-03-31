@@ -2,6 +2,31 @@
   line-height: 0;
 }
 
+/*.logo__glasses-unbroken {
+  display: none;
+}
+
+.logo__glasses-broken {
+  display: none;
+}
+
+.logo__star {
+  display: none;
+}*/
+
 .logo img {
-  @include image;
+  width: 75px;
+  height: 22px;
+}
+
+.logo--footer img {
+  width: 147px;
+  height: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo img {
+    width: 147px;
+    height: 40px;
+  }
 }

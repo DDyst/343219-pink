@@ -16,10 +16,13 @@
 .form__group {
   box-sizing: border-box;
   margin: 0;
-  padding: 24px 0 27px 0;
+  padding: 24px 0 25px 0;
   border: none;
   &--bg-grey {
     background-color: $bg-secondary;
+  }
+  &--irregular-padding {
+    padding-top: 32px;
   }
 }
 
@@ -32,6 +35,9 @@
   text-align: center;
   text-transform: uppercase;
   color: $color-secondary;
+  &--short-margin {
+    margin-bottom: 16px;
+  }
   &--mobile-hidden {
     display: none;
   }
@@ -44,15 +50,24 @@
 .form__checkbox {
   margin-bottom: 52px;
   &:last-child {
+    margin-bottom: 22px;
+  }
+}
+
+.form__contacts-field {
+  margin-bottom: 18px;
+}
+
+.form__radio {
+  margin-bottom: 42px;
+  &:last-child {
     margin-bottom: 24px;
   }
 }
 
-.form__radio {
-  margin-bottom: 36px;
-  &:last-child {
-    margin-bottom: 24px;
-  }
+.form__buttons {
+  padding-top: 3px;
+  padding-bottom: 15px;
 }
 
 .form__main-btn {
@@ -60,6 +75,7 @@
 }
 
 .form__footnote {
+  margin-top: 35px;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -91,7 +107,7 @@
   }
 }
 
-.form__btn-container {
+.form__pop-up-btn-container {
   padding-top: 48px;
   padding-bottom: 52px;
   background-color: $bg-secondary;
@@ -99,13 +115,13 @@
 
 @media (min-width: $tablet-width) {
   .form {
-    padding-top: 90px;
+    padding-top: 91px;
   }
 
   .form__desc {
     width: 82%;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 29px;
     font-size: 18px;
   }
 
@@ -122,10 +138,10 @@
 
   .form__group {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
     padding: 38px 58px 18px 58px;
     background-color: $bg-primary;
-    border: 2px groove #e5e5e5;
+    border: 2px solid #e5e5e5;
     &--second {
       order: 2;
     }
@@ -139,14 +155,14 @@
       order: 5;
     }
     &--no-border {
-      padding: 38px 0 18px 0;
+      padding: 38px 0 1px 0;
       border: none;
     }
   }
 
   .form__subtitle {
     position: absolute;
-    top: -15px;
+    top: -16px;
     left: 50%;
     margin: 0;
     padding: 0 32px;
@@ -159,18 +175,80 @@
     }
   }
 
+  .form__text-field {
+    margin-bottom: 48px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__radio {
+    margin-bottom: 45px;
+    &:first-child {
+      margin-top: 18px;
+    }
+    &:last-child {
+      margin-bottom: 41px;
+    }
+  }
+
+  .form__contacts-field {
+    position: relative;
+    margin-top: 3px;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 8px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      right: 2px;
+      width: 60px;
+      height: 59px;
+    }
+    &--phone {
+      &::after {
+        background: #e5e5e5 url("../img/icon-phone.svg") no-repeat center/20px auto;
+      }
+    }
+    &--mail {
+      &::after {
+        background: #e5e5e5 url("../img/icon-mail.svg") no-repeat center/18px auto;
+      }
+    }
+  }
+
+  .form__checkbox {
+    &:first-child {
+      margin-top: 18px;
+    }
+    &:last-child {
+      margin-bottom: 35px;
+    }
+  }
+
   .form__buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 50px;
   }
 
   .form__main-btn {
     margin: 0;
   }
+
+  .form__footnote {
+    margin: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .form__desc {
+    margin-bottom: 81px;
+  }
+
   .form__additional-desc {
     display: initial;
   }
@@ -184,7 +262,17 @@
     width: 100%;
     &--half-width {
       width: 435px;
-      padding: 38px 0 18px 0;
+      padding-left: 74px;
+    }
+    &--no-border {
+      padding: 0;
+    }
+    &--irregular-padding {
+      padding-bottom: 6px;
+    }
+    &:nth-of-type(2) {
+      padding-right: 0;
+      padding-bottom: 25px;
     }
   }
 
@@ -192,10 +280,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .form__contacts-field {
+    margin-bottom: 0;
+    &::after {
+      top: 2px;
+    }
   }
 
   .form__checkbox {
     width: 260px;
+    margin-top: 18px;
+    margin-bottom: 34px;
     &--second {
       order: 2;
     }
@@ -211,5 +309,10 @@
     &--sixth {
       order: 6;
     }
+  }
+
+  .form__buttons {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

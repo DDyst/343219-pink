@@ -3,14 +3,14 @@
   font-family: inherit;
   box-sizing: border-box;
   width: 100%;
-  padding: 15px 22px 14px 22px;
+  padding: 15px 22px 14px 20px;
   font-size: $font-size-bigger;
   line-height: 30px;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
   &--high {
     height: 201px;
-    margin-top: 16px;
+    margin-top: 0;
   }
   &:hover {
     border-color: $color-primary;
@@ -18,10 +18,14 @@
   &:focus {
     border-color: $color-secondary;
   }
+  &::placeholder {
+    color: inherit;
+    opacity: inherit;
+  }
 }
 
 .form-field__label {
-  padding-left: 23px;
+  padding-left: 22px;
   font-size: $font-size-bigger;
   line-height: 30px;
   cursor: pointer;
@@ -133,6 +137,29 @@
     }
   }
 
+  .form-field__label {
+    padding-left: 0;
+    &--text {
+      margin-top: 4px;
+      margin-right: 19px;
+    }
+    &--left-padding {
+      margin-top: 10px;
+      padding-left: 19px;
+    }
+  }
+
+  .form-field__text-field {
+    &--with-icon {
+      padding-right: 66px;
+    }
+    &--high {
+      height: 193px;
+      margin-top: 7px;
+      margin-bottom: 31px;
+    }
+  }
+
   .form-field__checkbox + .form-field__label {
     padding-left: 60px;
   }
@@ -146,6 +173,17 @@
   .form-field {
     &--half-width {
       width: 375px;
+    }
+  }
+
+  .form-field__text-field {
+    &--with-icon {
+      margin-top: 0;
+    }
+    &--high {
+      height: 128px;
+      margin-top: 4px;
+      margin-bottom: 23px;
     }
   }
 }
