@@ -27,7 +27,7 @@
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
           </ul>
         </nav>
       </div>
@@ -218,44 +218,47 @@
           <h2 class="visually-hidden">Загрузите свое изображение</h2>
           <p class="upload__desc">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         </div>
-        <form class="upload__form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
-          <div class="layout-positioner  upload__wrap">
-            <div class="upload__picture">
-              <a href="#">
-                <picture>
-                  <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
-                  <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" alt="Ваше изображение">
-                </picture>
-              </a>
-            </div>
-            <div class="upload__container">
-              <div class="upload__filters">
-                <input class="upload__filter-btn  upload__filter-btn--crop" type="radio" name="filter" id="crop-btn" value="crop" checked>
-                <label class="upload__label  upload__label--crop" for="crop-btn"><span class="visually-hidden">Вырезать</span></label>
-                <div class="range-slider  upload__slider  upload__slider--crop">
-                  <input class="range-slider__input" type="range" name="crop-slider" id="crop-field">
-                </div>
+        <div class="layout-positioner layout-positioner--desktop-only">
+          <form class="upload__form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
+            <div class="layout-positioner  layout-positioner--desktop-inactive  upload__wrap">
+              <div class="upload__picture">
+                <input class="upload__input" type="file" id="upload-field">
+                <label for="upload-field">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+                    <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" alt="Ваше изображение">
+                  </picture>
+                </label>
+              </div>
+              <div class="upload__container">
+                <div class="upload__filters">
+                  <input class="upload__filter-btn  upload__filter-btn--crop" type="radio" name="filter" id="crop-btn" value="crop" checked>
+                  <label class="upload__icon  upload__icon--crop" for="crop-btn"><span class="visually-hidden">Вырезать</span></label>
+                  <div class="range-slider  upload__slider  upload__slider--crop">
+                    <input class="range-slider__input" type="range" name="crop-slider" id="crop-field">
+                  </div>
 
-                <input class="upload__filter-btn  upload__filter-btn--fill" type="radio" name="filter" id="fill-btn" value="fill">
-                <label class="upload__label  upload__label--fill" for="fill-btn"><span class="visually-hidden">Заливка</span></label>
-                <div class="range-slider  upload__slider  upload__slider--fill">
-                  <input class="range-slider__input" type="range" name="fill-slider" id="fill-field">
-                </div>
+                  <input class="upload__filter-btn  upload__filter-btn--fill" type="radio" name="filter" id="fill-btn" value="fill">
+                  <label class="upload__icon  upload__icon--fill" for="fill-btn"><span class="visually-hidden">Заливка</span></label>
+                  <div class="range-slider  upload__slider  upload__slider--fill">
+                    <input class="range-slider__input" type="range" name="fill-slider" id="fill-field">
+                  </div>
 
-                <input class="upload__filter-btn  upload__filter-btn--contrast" type="radio" name="filter" id="contrast-btn" value="contrast">
-                <label class="upload__label  upload__label--contrast" for="contrast-btn"><span class="visually-hidden">Контрастность</span></label>
-                <div class="range-slider  upload__slider  upload__slider--contrast">
-                  <input class="range-slider__input" type="range" name="contrast-slider" id="contrast-field">
+                  <input class="upload__filter-btn  upload__filter-btn--contrast" type="radio" name="filter" id="contrast-btn" value="contrast">
+                  <label class="upload__icon  upload__icon--contrast" for="contrast-btn"><span class="visually-hidden">Контрастность</span></label>
+                  <div class="range-slider  upload__slider  upload__slider--contrast">
+                    <input class="range-slider__input" type="range" name="contrast-slider" id="contrast-field">
+                  </div>
+                </div>
+                <div class="upload__buttons">
+                  <input class="btn  btn--compressible  upload__btn" type="submit" value="Запостить">
+                  <input class="btn  btn--compressible  btn--gray  upload__btn" type="reset" value="Отмена">
                 </div>
               </div>
             </div>
-            <div class="upload__buttons">
-              <input class="btn  btn--compressible  upload__btn" type="submit" value="Запостить">
-              <input class="btn  btn--compressible  btn--gray  upload__btn" type="reset" value="Отмена">
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -281,5 +284,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="http://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
   </body>
 </html>

@@ -68,7 +68,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .btn {
     &--compressible {
       width: 260px;
@@ -83,6 +83,9 @@
     }
     &--compressible {
       width: 183px;
+    }
+    &--wide {
+      max-width: 460px;
     }
   }
 }
