@@ -85,34 +85,6 @@
   color: $color-secondary;
 }
 
-.form__pop-up {
-  padding-top: 40px;
-  text-align: center;
-  &--error {
-    padding-bottom: 50px;
-  }
-}
-
-.form__pop-up-title {
-  font-weight: normal;
-  font-size: $font-size-bigger;
-  font-family: $font-bold;
-}
-
-.form__pop-up-desc {
-  margin-top: 30px;
-  margin-bottom: 34px;
-  &--error {
-    margin-bottom: 38px;
-  }
-}
-
-.form__pop-up-btn-container {
-  padding-top: 48px;
-  padding-bottom: 52px;
-  background-color: $bg-secondary;
-}
-
 @media (min-width: $tablet-width) {
   .form {
     padding-top: 91px;
