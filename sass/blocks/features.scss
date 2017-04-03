@@ -44,7 +44,7 @@
   line-height: 24px;
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-width: $mobile-width) and (min-resolution: 144dpi), (min-width: $mobile-width) and (min-resolution: 1.5dppx) {
   .features__list {
     background:
       url("../img/iphone-screen-mobile@2x.png") no-repeat center 109%/157px auto,

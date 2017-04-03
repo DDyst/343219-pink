@@ -110,8 +110,10 @@
     display: block;
     position: absolute;
     top: 188px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
     border: 5px solid transparent;
     cursor: pointer;
     &::before,

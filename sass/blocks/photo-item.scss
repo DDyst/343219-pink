@@ -36,6 +36,10 @@
   @include image;
 }
 
+.photo-item__img a {
+  display: block;
+}
+
 .photo-item__desc {
   box-sizing: border-box;
   padding: 18px 18px 20px 18px;
@@ -67,7 +71,9 @@
   width: 13px;
   height: 12px;
   margin-right: 19px;
+  padding: 0;
   background: url("../img/icon-heart.svg") no-repeat center;
+  border: none;
   cursor: pointer;
 }
 
@@ -88,6 +94,7 @@
       width: 700px;
       &::after {
         top: 57px;
+        right: 5.7%;
       }
     }
   }
