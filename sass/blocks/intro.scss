@@ -10,7 +10,7 @@
     padding-bottom: 0;
     background:
       url("../img/iphone-hand-mobile@1x.png") no-repeat left 176px,
-      url("../img/bg-back-mobile@1x.jpg") no-repeat center -4px;
+      url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
     background-color: #2a3a4a;
   }
 }
@@ -24,13 +24,13 @@
   text-align: center;
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-width: $mobile-width) and (min-resolution: 144dpi), (min-width: $mobile-width) and (min-resolution: 1.5dppx) {
   .intro {
     background: #2a3a4a url("../img/bg-back-mobile@2x.jpg") no-repeat center -4px/700px auto;
     &--index {
       background:
         url("../img/iphone-hand-mobile@2x.png") no-repeat left 176px/258px auto,
-        url("../img/bg-back-mobile@2x.jpg") no-repeat center -4px/700px auto;
+        url("../img/bg-back-mobile@2x.jpg") no-repeat center top/700px auto;
     }
   }
 }
