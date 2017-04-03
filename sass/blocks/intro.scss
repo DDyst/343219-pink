@@ -78,7 +78,7 @@
       padding-top: 188px;
       padding-bottom: 91px;
       background:
-        url("../img/iphone-hand-desktop@1x.png") no-repeat 58.4% 209px,
+        url("../img/iphone-hand-desktop@1x.png") no-repeat 26px 209px,
         url("../img/bg-back-desktop@1x.jpg") no-repeat center top/cover;
       background-color: #2a3a4a;
     }
@@ -88,6 +88,26 @@
 @media (min-width: $desktop-width) and (min-resolution: 144dpi), (min-width: $desktop-width) and (min-resolution: 1.5dppx) {
   .intro {
     background-image: #2a3a4a url("../img/bg-back-desktop@2x.jpg") no-repeat center top/cover;
+    &--index {
+      background:
+        url("../img/iphone-hand-desktop@2x.png") no-repeat 26px 209px/1050px auto,
+        url("../img/bg-back-desktop@2x.jpg") no-repeat center top/cover;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .intro {
+    &--index {
+      background:
+        url("../img/iphone-hand-desktop@1x.png") no-repeat 58.4% 209px,
+        url("../img/bg-back-desktop@1x.jpg") no-repeat center top/cover;
+    }
+  }
+}
+
+@media (min-width: 1100px) and (min-resolution: 144dpi), (min-width: 1100px) and (min-resolution: 1.5dppx) {
+  .intro {
     &--index {
       background:
         url("../img/iphone-hand-desktop@2x.png") no-repeat 58.4% 209px/1050px auto,

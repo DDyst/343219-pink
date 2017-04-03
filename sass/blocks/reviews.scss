@@ -109,10 +109,10 @@
   .reviews__slider-arrow {
     display: block;
     position: absolute;
-    top: 178px;
+    top: 188px;
     width: 30px;
     height: 30px;
-    border: 15px solid transparent;
+    border: 5px solid transparent;
     cursor: pointer;
     &::before,
     &::after {
@@ -131,11 +131,11 @@
       height: 3px;
     }
     &--right {
-      right: -10px;
+      right: 0;
       transform: rotate(135deg);
     }
     &--left {
-      left: -10px;
+      left: 0;
       transform: rotate(-45deg);
     }
     &:hover {
