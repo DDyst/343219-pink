@@ -12,6 +12,14 @@ var reviewsToggleSecond = document.querySelector(".reviews__slider-controls-item
 var reviewsToggleThird = document.querySelector(".reviews__slider-controls-item:nth-child(3)");
 var reviewsArrowRight = document.querySelector(".reviews__slider-arrow--right");
 var reviewsArrowLeft = document.querySelector(".reviews__slider-arrow--left");
+var form = document.querySelector(".form__body");
+var name = document.querySelector("[name=name");
+var surname = document.querySelector("[name=surname");
+var email = document.querySelector("[name=email");
+var error = document.getElementById("error");
+var success = document.getElementById("success");
+var overlay = document.getElementById("overlay");
+var modalBtn = document.querySelector(".modal-content__btn");
 
 // Открытие/закрытие мобильного меню
 navMain.classList.add("main-nav--closed");
@@ -144,3 +152,24 @@ function initMap() {
   });
 }
 google.maps.event.addDomListener(window, "load", initMap);
+
+// Вызов модального окна при отправке формы
+form.addEventListener("submit", function(event) {
+  if (!name.value || !surname.value || !email.value) {
+    event.preventDefault();
+    error.classList.add("js-show");
+    overlay.classList.add("js-show");
+  } else {
+    event.preventDefault();
+    success.classList.add("js-show");
+    overlay.classList.add("js-show");
+  }
+});
+
+// Закрытие модального окна
+modalBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+  error.classList.remove("js-show");
+  success.classList.remove("js-show");
+  overlay.classList.remove("js-show");
+});
