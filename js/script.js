@@ -13,13 +13,14 @@ var reviewsToggleThird = document.querySelector(".reviews__slider-controls-item:
 var reviewsArrowRight = document.querySelector(".reviews__slider-arrow--right");
 var reviewsArrowLeft = document.querySelector(".reviews__slider-arrow--left");
 var form = document.querySelector(".form__body");
-var name = document.querySelector("[name=name]");
+var firstName = document.querySelector("[name=name]");
 var surname = document.querySelector("[name=surname]");
 var email = document.querySelector("[name=email]");
 var error = document.getElementById("error");
 var success = document.getElementById("success");
 var overlay = document.getElementById("overlay");
-var modalBtn = document.querySelector(".modal-content__btn");
+var errorBtn = document.getElementById("error-btn");
+var successBtn = document.getElementById("success-btn");
 
 // Открытие/закрытие мобильного меню
 navMain.classList.add("main-nav--closed");
@@ -151,6 +152,37 @@ if (reviewsArrowLeft) {
   });
 }
 
+// Вызов модального окна при отправке формы
+if (form) {
+  form.addEventListener("submit", function(event) {
+    if (!firstName.value || !surname.value || !email.value) {
+      event.preventDefault();
+      error.classList.add("js-show");
+      overlay.classList.add("js-show");
+    } else {
+      event.preventDefault();
+      success.classList.add("js-show");
+      overlay.classList.add("js-show");
+    }
+  });
+}
+
+// Закрытие модального окна
+if (errorBtn) {
+  errorBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    error.classList.remove("js-show");
+    overlay.classList.remove("js-show");
+  });
+}
+if (successBtn) {
+  successBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    success.classList.remove("js-show");
+    overlay.classList.remove("js-show");
+  });
+}
+
 // Интерактивная карта
 function initMap() {
   var mapCanvas = document.querySelector(".map");
@@ -168,27 +200,4 @@ function initMap() {
     icon: image
   });
 }
-if (google) {
-  google.maps.event.addDomListener(window, "load", initMap);
-}
-
-// Вызов модального окна при отправке формы
-form.addEventListener("submit", function(event) {
-  if (!name.value || !surname.value || !email.value) {
-    event.preventDefault();
-    error.classList.add("js-show");
-    overlay.classList.add("js-show");
-  } else {
-    event.preventDefault();
-    success.classList.add("js-show");
-    overlay.classList.add("js-show");
-  }
-});
-
-// Закрытие модального окна
-modalBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  error.classList.remove("js-show");
-  success.classList.remove("js-show");
-  overlay.classList.remove("js-show");
-});
+google.maps.event.addDomListener(window, "load", initMap);
