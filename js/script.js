@@ -193,7 +193,7 @@ function initMap() {
     scrollwheel: false
   }
   var map = new google.maps.Map(mapCanvas, mapOptions);
-  var image = "../img/icon-map-marker.svg";
+  var image = "img/icon-map-marker.svg";
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(59.9385603,30.3229597),
     map: map,
